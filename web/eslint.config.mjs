@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // The headset workspace's build output (vr/ is type-checked on its own).
+    "public/vr/**",
   ]),
 ]);
 

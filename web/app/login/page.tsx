@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight, Eye, EyeOff, Lock, LogOut, Plane, ShieldCheck, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, Eye, EyeOff, Glasses, Lock, LogOut, Plane, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import { useEffect, useState, type FormEvent } from "react";
 
 import { NightApproach } from "@/components/login-art";
@@ -165,6 +165,20 @@ export default function Login() {
             </Button>
           </form>
           <p className="mt-6 text-xs text-muted">Each role sees only what it may: the server checks every action.</p>
+          {/* A full page load: the headset workspace is its own app, served at /vr. */}
+          <a
+            href="/vr?sample=1"
+            className="mt-6 flex items-center gap-3 rounded-xl border border-line bg-sunken px-4 py-3 text-sm transition hover:border-sky-300"
+          >
+            <Glasses size={18} className="shrink-0 text-accent" />
+            <span className="flex flex-col">
+              <span className="font-medium">Try the headset workspace</span>
+              <span className="text-xs text-muted">
+                No account needed: a sample operation worked out by the real engine. Open on a Meta Quest.
+              </span>
+            </span>
+            <ArrowRight size={14} className="ml-auto shrink-0 text-muted" />
+          </a>
         </div>
       </section>
     </main>

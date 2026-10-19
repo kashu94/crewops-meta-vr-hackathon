@@ -6,6 +6,10 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Don't let `next dev` write its AGENTS.md instructions file into the repo.
   agentRules: false,
+  // The headset workspace (vr/) builds into public/vr; /vr serves its page.
+  async rewrites() {
+    return [{ source: "/vr", destination: "/vr/index.html" }];
+  },
   turbopack: {
     rules: {
       "*.css": {

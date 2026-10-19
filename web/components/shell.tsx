@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity, ChevronDown, LogOut, Mic, Plane, Radio } from "lucide-react";
+import { Activity, ChevronDown, Glasses, LogOut, Mic, Plane, Radio } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useRef, useState, type ReactNode } from "react";
@@ -119,6 +119,16 @@ function TopBar() {
               </span>
               {state === "live" ? "Live" : state === "connecting" ? "Connecting" : "Reconnecting"}
             </span>
+          )}
+          {me.roles.some((r) => r === "controller" || r === "approver") && (
+            // a full page load: the headset workspace is its own app, served at /vr
+            <a
+              href="/vr"
+              title="Open your desk in the headset (Meta Quest browser)"
+              className="hidden items-center gap-1.5 rounded-lg border border-line px-2.5 py-1.5 text-xs font-medium transition hover:border-sky-300 sm:flex"
+            >
+              <Glasses size={14} className="text-accent" /> Headset
+            </a>
           )}
           <GuideButton />
           {(me.roles.includes("controller") || me.roles.includes("approver")) && <DesktopAlerts />}
