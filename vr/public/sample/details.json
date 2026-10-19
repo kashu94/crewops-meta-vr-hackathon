@@ -1,0 +1,1840 @@
+{
+ "r-sample-1042": {
+  "disruption_id": "r-sample-1042",
+  "status": "OPTIONS_READY",
+  "summary": "A. Nair (C-1042) unavailable (sick): P-2291 Captain: Assign Captain D. Reddy (C-3310) (reserve callout), \u20b923,090",
+  "severity": {
+   "level": "medium",
+   "reasons": [
+    "841 passengers booked"
+   ]
+  },
+  "report_type": "crew_unavailable",
+  "reported_utc": "2026-10-12T17:30:00Z",
+  "reported_by": "u-sample",
+  "details": {
+   "crew_id": "C-1042",
+   "from_date": "2026-10-13",
+   "to_date": "2026-10-14",
+   "reason": "sick"
+  },
+  "desks": [
+   {
+    "desk_id": "desk-2",
+    "controller": "Rohit Malhotra"
+   }
+  ],
+  "yours": true,
+  "handling": {
+   "kind": "recrew",
+   "text": "Crew control re-crews 1 seat(s): choose cover below, then a different approver approves it."
+  },
+  "airlines": [
+   {
+    "code": "KS",
+    "name": "Konkan Skyways",
+    "color": "#ea580c"
+   }
+  ],
+  "notices": [],
+  "stands": [],
+  "next_at_gate": [],
+  "flights": [],
+  "delays": [],
+  "notes": [],
+  "seats": [
+   {
+    "pairing_id": "P-2291",
+    "role": "Captain",
+    "crew_out": "C-1042",
+    "status": "options",
+    "note": "",
+    "legal_options": 4,
+    "excluded": 5,
+    "cancellation_cost_inr": 1500000,
+    "cancellation_multiple": 65,
+    "delay_hours": 0,
+    "delay_date": null,
+    "impact": {
+     "affected_dates": [
+      "2026-10-13",
+      "2026-10-14"
+     ],
+     "uncovered_flights": [
+      "KS412-2026-10-13",
+      "KS413-2026-10-13",
+      "KS588-2026-10-13",
+      "KS589-2026-10-14",
+      "KS590-2026-10-14",
+      "KS591-2026-10-14"
+     ],
+     "at_risk_flights": [],
+     "passengers": 841,
+     "flown_before": []
+    },
+    "options": [
+     {
+      "rank": 1,
+      "action": "Assign Captain D. Reddy (C-3310) (reserve callout)",
+      "strategy": "reserve_callout",
+      "crew_id": "C-3310",
+      "name": "D. Reddy",
+      "crew_rank": "Captain",
+      "cost_inr": 23090,
+      "cost_breakdown": {
+       "callout": 18500,
+       "seniority_allowance": 4050,
+       "travel": 540
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 2,
+      "action": "Assign Captain N. Chandra (C-3983) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-3983",
+      "name": "N. Chandra",
+      "crew_rank": "Captain",
+      "cost_inr": 30660,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 5400,
+       "travel": 1260
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 3,
+      "action": "Assign Captain P. Reddy (C-5566) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-5566",
+      "name": "P. Reddy",
+      "crew_rank": "Captain",
+      "cost_inr": 31740,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 7200,
+       "travel": 540
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 4,
+      "action": "Assign Captain N. Sen (C-1526) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-1526",
+      "name": "N. Sen",
+      "crew_rank": "Captain",
+      "cost_inr": 33180,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 7200,
+       "travel": 1980
+      },
+      "delay_hours": 0
+     }
+    ],
+    "context": {
+     "aircraft": "VT-DXC",
+     "aircraft_type": "A320",
+     "base": "BLR",
+     "dates": [
+      "2026-10-13",
+      "2026-10-14"
+     ],
+     "affected_dates": [
+      "2026-10-13",
+      "2026-10-14"
+     ],
+     "requirement": "A Captain rated on the A320, legal for every rule on the affected days.",
+     "flights": [
+      {
+       "flight_id": "KS412-2026-10-13",
+       "flight_no": "KS412",
+       "date": "2026-10-13",
+       "from": "BLR",
+       "to": "BOM",
+       "dep_utc": "2026-10-13T07:00:00Z",
+       "arr_utc": "2026-10-13T08:45:00Z",
+       "seats": 162,
+       "booked": 149,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "KS413-2026-10-13",
+       "flight_no": "KS413",
+       "date": "2026-10-13",
+       "from": "BOM",
+       "to": "BLR",
+       "dep_utc": "2026-10-13T09:30:00Z",
+       "arr_utc": "2026-10-13T11:15:00Z",
+       "seats": 162,
+       "booked": 134,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "KS588-2026-10-13",
+       "flight_no": "KS588",
+       "date": "2026-10-13",
+       "from": "BLR",
+       "to": "DEL",
+       "dep_utc": "2026-10-13T12:15:00Z",
+       "arr_utc": "2026-10-13T15:00:00Z",
+       "seats": 162,
+       "booked": 114,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "KS589-2026-10-14",
+       "flight_no": "KS589",
+       "date": "2026-10-14",
+       "from": "DEL",
+       "to": "BLR",
+       "dep_utc": "2026-10-14T05:00:00Z",
+       "arr_utc": "2026-10-14T07:45:00Z",
+       "seats": 162,
+       "booked": 142,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "KS590-2026-10-14",
+       "flight_no": "KS590",
+       "date": "2026-10-14",
+       "from": "BLR",
+       "to": "CCU",
+       "dep_utc": "2026-10-14T08:30:00Z",
+       "arr_utc": "2026-10-14T11:00:00Z",
+       "seats": 162,
+       "booked": 148,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "KS591-2026-10-14",
+       "flight_no": "KS591",
+       "date": "2026-10-14",
+       "from": "CCU",
+       "to": "BLR",
+       "dep_utc": "2026-10-14T11:45:00Z",
+       "arr_utc": "2026-10-14T14:15:00Z",
+       "seats": 162,
+       "booked": 154,
+       "state": "uncrewed"
+      }
+     ],
+     "crew": [
+      {
+       "crew_id": "C-1042",
+       "name": "A. Nair",
+       "role": "Captain",
+       "state": "out"
+      },
+      {
+       "crew_id": "C-1694",
+       "name": "S. Menon",
+       "role": "First Officer",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-3005",
+       "name": "H. Chandra",
+       "role": "Senior Cabin Crew",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-4395",
+       "name": "V. Rao",
+       "role": "Cabin Crew",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-4273",
+       "name": "P. Menon",
+       "role": "Cabin Crew",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-1873",
+       "name": "K. Joshi",
+       "role": "Cabin Crew",
+       "state": "on"
+      }
+     ]
+    },
+    "re_crewed": null,
+    "live": {
+     "options": [
+      {
+       "rank": 1,
+       "action": "Assign Captain D. Reddy (C-3310) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3310",
+       "name": "D. Reddy",
+       "crew_rank": "Captain",
+       "cost_inr": 23090,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 4050,
+        "travel": 540
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 30,
+       "risk_score": 0.17,
+       "experience_years": 14,
+       "resilience": 66.7
+      },
+      {
+       "rank": 2,
+       "action": "Assign Captain N. Chandra (C-3983) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-3983",
+       "name": "N. Chandra",
+       "crew_rank": "Captain",
+       "cost_inr": 30660,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 5400,
+        "travel": 1260
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 65,
+       "risk_score": 0.1,
+       "experience_years": 15,
+       "resilience": 100.0
+      },
+      {
+       "rank": 3,
+       "action": "Assign Captain P. Reddy (C-5566) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-5566",
+       "name": "P. Reddy",
+       "crew_rank": "Captain",
+       "cost_inr": 31740,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 7200,
+        "travel": 540
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 30,
+       "risk_score": 0.08,
+       "experience_years": 21,
+       "resilience": 100.0
+      },
+      {
+       "rank": 4,
+       "action": "Assign Captain N. Sen (C-1526) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-1526",
+       "name": "N. Sen",
+       "crew_rank": "Captain",
+       "cost_inr": 33180,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 7200,
+        "travel": 1980
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 110,
+       "risk_score": 0.12,
+       "experience_years": 20,
+       "resilience": 100.0
+      }
+     ],
+     "policies": {
+      "cheapest": {
+       "rank": 1,
+       "action": "Assign Captain D. Reddy (C-3310) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3310",
+       "name": "D. Reddy",
+       "crew_rank": "Captain",
+       "cost_inr": 23090,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 4050,
+        "travel": 540
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 30,
+       "risk_score": 0.17,
+       "experience_years": 14,
+       "resilience": 66.7
+      },
+      "least_delay": {
+       "rank": 1,
+       "action": "Assign Captain D. Reddy (C-3310) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3310",
+       "name": "D. Reddy",
+       "crew_rank": "Captain",
+       "cost_inr": 23090,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 4050,
+        "travel": 540
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 30,
+       "risk_score": 0.17,
+       "experience_years": 14,
+       "resilience": 66.7
+      },
+      "keeps_most_reserve_cover": {
+       "rank": 2,
+       "action": "Assign Captain N. Chandra (C-3983) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-3983",
+       "name": "N. Chandra",
+       "crew_rank": "Captain",
+       "cost_inr": 30660,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 5400,
+        "travel": 1260
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 65,
+       "risk_score": 0.1,
+       "experience_years": 15,
+       "resilience": 100.0
+      }
+     },
+     "strategies": [
+      {
+       "rank": 1,
+       "action": "Assign Captain D. Reddy (C-3310) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3310",
+       "name": "D. Reddy",
+       "crew_rank": "Captain",
+       "cost_inr": 23090,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 4050,
+        "travel": 540
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 30,
+       "risk_score": 0.17,
+       "experience_years": 14,
+       "resilience": 66.7
+      },
+      {
+       "rank": 2,
+       "action": "Assign Captain N. Chandra (C-3983) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-3983",
+       "name": "N. Chandra",
+       "crew_rank": "Captain",
+       "cost_inr": 30660,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 5400,
+        "travel": 1260
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 65,
+       "risk_score": 0.1,
+       "experience_years": 15,
+       "resilience": 100.0
+      },
+      {
+       "rank": 5,
+       "action": "Cancel all 6 flights of the pairing",
+       "strategy": "cancel",
+       "crew_id": null,
+       "name": "Cancel all 6 flights of the pairing",
+       "crew_rank": null,
+       "cost_inr": 1500000,
+       "cost_breakdown": {
+        "cancellation": 1500000
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": null,
+       "reachability_minutes": null,
+       "risk_score": null,
+       "experience_years": null,
+       "resilience": null
+      }
+     ],
+     "cancellation": {
+      "rank": 5,
+      "action": "Cancel all 6 flights of the pairing",
+      "strategy": "cancel",
+      "crew_id": null,
+      "name": "Cancel all 6 flights of the pairing",
+      "crew_rank": null,
+      "cost_inr": 1500000,
+      "cost_breakdown": {
+       "cancellation": 1500000
+      },
+      "delay_hours": 0.0,
+      "positioning_flight": null,
+      "base": null,
+      "reachability_minutes": null,
+      "risk_score": null,
+      "experience_years": null,
+      "resilience": null
+     },
+     "short_crew": null,
+     "legal_options": 4,
+     "funnel": [
+      {
+       "stage": "considered",
+       "remaining": 9,
+       "dropped": 0,
+       "reason": ""
+      },
+      {
+       "stage": "qualified",
+       "remaining": 8,
+       "dropped": 1,
+       "reason": "not rated on the aircraft or not active"
+      },
+      {
+       "stage": "rested",
+       "remaining": 5,
+       "dropped": 3,
+       "reason": "rest conflict or already rostered"
+      },
+      {
+       "stage": "within limits",
+       "remaining": 4,
+       "dropped": 1,
+       "reason": "would breach a duty or flight-hour limit"
+      },
+      {
+       "stage": "legal",
+       "remaining": 4,
+       "dropped": 0,
+       "reason": ""
+      }
+     ],
+     "excluded": [
+      {
+       "crew_id": "C-1017",
+       "name": "A. Verma",
+       "stage": "rested",
+       "rule_ids": [
+        "RULE-REST-04"
+       ],
+       "reasons": [
+        "only 11.0h rest before P-2217 on 2026-10-14",
+        "double-booked: P-2217 overlaps on 2026-10-14"
+       ]
+      },
+      {
+       "crew_id": "C-1443",
+       "name": "K. Sharma",
+       "stage": "rested",
+       "rule_ids": [
+        "RULE-REST-04"
+       ],
+       "reasons": [
+        "double-booked: P-2216 overlaps on 2026-10-13"
+       ]
+      },
+      {
+       "crew_id": "C-2087",
+       "name": "R. Iyer",
+       "stage": "within limits",
+       "rule_ids": [
+        "RULE-DUTY-02"
+       ],
+       "reasons": [
+        "would exceed 60h/7d by 1h20m on 2026-10-13 (total 61.33h)",
+        "would exceed 60h/7d by 1h05m on 2026-10-14 (total 61.08h)"
+       ]
+      },
+      {
+       "crew_id": "C-5015",
+       "name": "S. Malhotra",
+       "stage": "qualified",
+       "rule_ids": [
+        "RULE-QUAL-05"
+       ],
+       "reasons": [
+        "status is leave, not active"
+       ]
+      },
+      {
+       "crew_id": "C-5820",
+       "name": "N. Nair",
+       "stage": "rested",
+       "rule_ids": [
+        "RULE-REST-04"
+       ],
+       "reasons": [
+        "only 11.75h rest before P-2218 on 2026-10-15"
+       ]
+      }
+     ],
+     "excluded_count": 5
+    },
+    "reserves": [
+     {
+      "base": "BLR",
+      "on_call": 3
+     },
+     {
+      "base": "DEL",
+      "on_call": 1
+     }
+    ]
+   }
+  ],
+  "joint_plan": null,
+  "contention": {},
+  "same_seat": [],
+  "unavailable_now": {},
+  "suggestions": [],
+  "plans": [],
+  "audit": [
+   {
+    "at": "2026-10-12T18:00:00Z",
+    "action": "REPORTED",
+    "actor": "u-sample"
+   },
+   {
+    "at": "2026-10-19T06:46:39Z",
+    "action": "OPTIONS_READY",
+    "actor": "system:analysis"
+   }
+  ]
+ },
+ "r-sample-1600": {
+  "disruption_id": "r-sample-1600",
+  "status": "OPTIONS_READY",
+  "summary": "S. Rao (C-1600) unavailable (sick): P-2223 Captain: Assign Captain M. Pillai (C-3315) (reserve callout), \u20b921,110",
+  "severity": {
+   "level": "low",
+   "reasons": [
+    "a reserve covers it"
+   ]
+  },
+  "report_type": "crew_unavailable",
+  "reported_utc": "2026-10-12T17:30:00Z",
+  "reported_by": "u-sample",
+  "details": {
+   "crew_id": "C-1600",
+   "from_date": "2026-10-13",
+   "to_date": "2026-10-13",
+   "reason": "sick"
+  },
+  "desks": [
+   {
+    "desk_id": "desk-2",
+    "controller": "Rohit Malhotra"
+   }
+  ],
+  "yours": true,
+  "handling": {
+   "kind": "recrew",
+   "text": "Crew control re-crews 1 seat(s): choose cover below, then a different approver approves it."
+  },
+  "airlines": [
+   {
+    "code": "NG",
+    "name": "Nilgiri Connect",
+    "color": "#059669"
+   }
+  ],
+  "notices": [],
+  "stands": [],
+  "next_at_gate": [],
+  "flights": [],
+  "delays": [],
+  "notes": [],
+  "seats": [
+   {
+    "pairing_id": "P-2223",
+    "role": "Captain",
+    "crew_out": "C-1600",
+    "status": "options",
+    "note": "",
+    "legal_options": 6,
+    "excluded": 1,
+    "cancellation_cost_inr": 1000000,
+    "cancellation_multiple": 47,
+    "delay_hours": 0,
+    "delay_date": null,
+    "impact": {
+     "affected_dates": [
+      "2026-10-13"
+     ],
+     "uncovered_flights": [
+      "NG451-2026-10-13",
+      "NG452-2026-10-13",
+      "NG453-2026-10-13",
+      "NG454-2026-10-13"
+     ],
+     "at_risk_flights": [],
+     "passengers": 229,
+     "flown_before": []
+    },
+    "options": [
+     {
+      "rank": 1,
+      "action": "Assign Captain M. Pillai (C-3315) (reserve callout)",
+      "strategy": "reserve_callout",
+      "crew_id": "C-3315",
+      "name": "M. Pillai",
+      "crew_rank": "Captain",
+      "cost_inr": 21110,
+      "cost_breakdown": {
+       "callout": 18500,
+       "seniority_allowance": 2250,
+       "travel": 360
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 2,
+      "action": "Assign Captain H. Naidu (C-2091) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-2091",
+      "name": "H. Naidu",
+      "crew_rank": "Captain",
+      "cost_inr": 26700,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 1800,
+       "travel": 900
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 3,
+      "action": "Assign Captain D. Verma (C-5392) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-5392",
+      "name": "D. Verma",
+      "crew_rank": "Captain",
+      "cost_inr": 27870,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 3150,
+       "travel": 720
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 4,
+      "action": "Assign Captain S. Kulkarni (C-2221) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-2221",
+      "name": "S. Kulkarni",
+      "crew_rank": "Captain",
+      "cost_inr": 33810,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 8550,
+       "travel": 1260
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 5,
+      "action": "Assign Captain L. Verma (C-3231) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-3231",
+      "name": "L. Verma",
+      "crew_rank": "Captain",
+      "cost_inr": 34080,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 8100,
+       "travel": 1980
+      },
+      "delay_hours": 0
+     }
+    ],
+    "context": {
+     "aircraft": "VT-DXE",
+     "aircraft_type": "ATR72",
+     "base": "BLR",
+     "dates": [
+      "2026-10-13"
+     ],
+     "affected_dates": [
+      "2026-10-13"
+     ],
+     "requirement": "A Captain rated on the ATR72, legal for every rule on the affected days.",
+     "flights": [
+      {
+       "flight_id": "NG451-2026-10-13",
+       "flight_no": "NG451",
+       "date": "2026-10-13",
+       "from": "BLR",
+       "to": "COK",
+       "dep_utc": "2026-10-13T04:00:00Z",
+       "arr_utc": "2026-10-13T05:15:00Z",
+       "seats": 72,
+       "booked": 63,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "NG452-2026-10-13",
+       "flight_no": "NG452",
+       "date": "2026-10-13",
+       "from": "COK",
+       "to": "BLR",
+       "dep_utc": "2026-10-13T06:00:00Z",
+       "arr_utc": "2026-10-13T07:15:00Z",
+       "seats": 72,
+       "booked": 51,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "NG453-2026-10-13",
+       "flight_no": "NG453",
+       "date": "2026-10-13",
+       "from": "BLR",
+       "to": "MAA",
+       "dep_utc": "2026-10-13T08:00:00Z",
+       "arr_utc": "2026-10-13T09:00:00Z",
+       "seats": 72,
+       "booked": 62,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "NG454-2026-10-13",
+       "flight_no": "NG454",
+       "date": "2026-10-13",
+       "from": "MAA",
+       "to": "BLR",
+       "dep_utc": "2026-10-13T09:45:00Z",
+       "arr_utc": "2026-10-13T10:45:00Z",
+       "seats": 72,
+       "booked": 53,
+       "state": "uncrewed"
+      }
+     ],
+     "crew": [
+      {
+       "crew_id": "C-1600",
+       "name": "S. Rao",
+       "role": "Captain",
+       "state": "out"
+      },
+      {
+       "crew_id": "C-2085",
+       "name": "D. Iyer",
+       "role": "First Officer",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-3334",
+       "name": "A. Sen",
+       "role": "Senior Cabin Crew",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-2100",
+       "name": "M. Reddy",
+       "role": "Cabin Crew",
+       "state": "on"
+      }
+     ]
+    },
+    "re_crewed": null,
+    "live": {
+     "options": [
+      {
+       "rank": 1,
+       "action": "Assign Captain M. Pillai (C-3315) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3315",
+       "name": "M. Pillai",
+       "crew_rank": "Captain",
+       "cost_inr": 21110,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 2250,
+        "travel": 360
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 20,
+       "risk_score": 0.27,
+       "experience_years": 13,
+       "resilience": 66.7
+      },
+      {
+       "rank": 2,
+       "action": "Assign Captain H. Naidu (C-2091) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-2091",
+       "name": "H. Naidu",
+       "crew_rank": "Captain",
+       "cost_inr": 26700,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 1800,
+        "travel": 900
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 45,
+       "risk_score": 0.23,
+       "experience_years": 12,
+       "resilience": 100.0
+      },
+      {
+       "rank": 3,
+       "action": "Assign Captain D. Verma (C-5392) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-5392",
+       "name": "D. Verma",
+       "crew_rank": "Captain",
+       "cost_inr": 27870,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 3150,
+        "travel": 720
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 35,
+       "risk_score": 0.41,
+       "experience_years": 15,
+       "resilience": 100.0
+      },
+      {
+       "rank": 4,
+       "action": "Assign Captain S. Kulkarni (C-2221) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-2221",
+       "name": "S. Kulkarni",
+       "crew_rank": "Captain",
+       "cost_inr": 33810,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 8550,
+        "travel": 1260
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 70,
+       "risk_score": 0.15,
+       "experience_years": 27,
+       "resilience": 100.0
+      },
+      {
+       "rank": 5,
+       "action": "Assign Captain L. Verma (C-3231) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-3231",
+       "name": "L. Verma",
+       "crew_rank": "Captain",
+       "cost_inr": 34080,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 8100,
+        "travel": 1980
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 110,
+       "risk_score": 0.1,
+       "experience_years": 20,
+       "resilience": 100.0
+      },
+      {
+       "rank": 6,
+       "action": "Assign Captain R. Kulkarni (C-1671) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-1671",
+       "name": "R. Kulkarni",
+       "crew_rank": "Captain",
+       "cost_inr": 34440,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 9000,
+        "travel": 1440
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 75,
+       "risk_score": 0.05,
+       "experience_years": 24,
+       "resilience": 100.0
+      }
+     ],
+     "policies": {
+      "cheapest": {
+       "rank": 1,
+       "action": "Assign Captain M. Pillai (C-3315) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3315",
+       "name": "M. Pillai",
+       "crew_rank": "Captain",
+       "cost_inr": 21110,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 2250,
+        "travel": 360
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 20,
+       "risk_score": 0.27,
+       "experience_years": 13,
+       "resilience": 66.7
+      },
+      "least_delay": {
+       "rank": 1,
+       "action": "Assign Captain M. Pillai (C-3315) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3315",
+       "name": "M. Pillai",
+       "crew_rank": "Captain",
+       "cost_inr": 21110,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 2250,
+        "travel": 360
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 20,
+       "risk_score": 0.27,
+       "experience_years": 13,
+       "resilience": 66.7
+      },
+      "keeps_most_reserve_cover": {
+       "rank": 2,
+       "action": "Assign Captain H. Naidu (C-2091) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-2091",
+       "name": "H. Naidu",
+       "crew_rank": "Captain",
+       "cost_inr": 26700,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 1800,
+        "travel": 900
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 45,
+       "risk_score": 0.23,
+       "experience_years": 12,
+       "resilience": 100.0
+      }
+     },
+     "strategies": [
+      {
+       "rank": 1,
+       "action": "Assign Captain M. Pillai (C-3315) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3315",
+       "name": "M. Pillai",
+       "crew_rank": "Captain",
+       "cost_inr": 21110,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 2250,
+        "travel": 360
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 20,
+       "risk_score": 0.27,
+       "experience_years": 13,
+       "resilience": 66.7
+      },
+      {
+       "rank": 2,
+       "action": "Assign Captain H. Naidu (C-2091) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-2091",
+       "name": "H. Naidu",
+       "crew_rank": "Captain",
+       "cost_inr": 26700,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 1800,
+        "travel": 900
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 45,
+       "risk_score": 0.23,
+       "experience_years": 12,
+       "resilience": 100.0
+      },
+      {
+       "rank": 7,
+       "action": "Cancel all 4 flights of the pairing",
+       "strategy": "cancel",
+       "crew_id": null,
+       "name": "Cancel all 4 flights of the pairing",
+       "crew_rank": null,
+       "cost_inr": 1000000,
+       "cost_breakdown": {
+        "cancellation": 1000000
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": null,
+       "reachability_minutes": null,
+       "risk_score": null,
+       "experience_years": null,
+       "resilience": null
+      }
+     ],
+     "cancellation": {
+      "rank": 7,
+      "action": "Cancel all 4 flights of the pairing",
+      "strategy": "cancel",
+      "crew_id": null,
+      "name": "Cancel all 4 flights of the pairing",
+      "crew_rank": null,
+      "cost_inr": 1000000,
+      "cost_breakdown": {
+       "cancellation": 1000000
+      },
+      "delay_hours": 0.0,
+      "positioning_flight": null,
+      "base": null,
+      "reachability_minutes": null,
+      "risk_score": null,
+      "experience_years": null,
+      "resilience": null
+     },
+     "short_crew": null,
+     "legal_options": 6,
+     "funnel": [
+      {
+       "stage": "considered",
+       "remaining": 7,
+       "dropped": 0,
+       "reason": ""
+      },
+      {
+       "stage": "rested",
+       "remaining": 6,
+       "dropped": 1,
+       "reason": "rest conflict or already rostered"
+      },
+      {
+       "stage": "legal",
+       "remaining": 6,
+       "dropped": 0,
+       "reason": ""
+      }
+     ],
+     "excluded": [
+      {
+       "crew_id": "C-3721",
+       "name": "R. Kapoor",
+       "stage": "rested",
+       "rule_ids": [
+        "RULE-REST-04"
+       ],
+       "reasons": [
+        "double-booked: P-2230 overlaps on 2026-10-13"
+       ]
+      }
+     ],
+     "excluded_count": 1
+    },
+    "reserves": [
+     {
+      "base": "BLR",
+      "on_call": 3
+     },
+     {
+      "base": "DEL",
+      "on_call": 1
+     }
+    ]
+   }
+  ],
+  "joint_plan": null,
+  "contention": {},
+  "same_seat": [],
+  "unavailable_now": {},
+  "suggestions": [],
+  "plans": [],
+  "audit": [
+   {
+    "at": "2026-10-12T18:00:00Z",
+    "action": "REPORTED",
+    "actor": "u-sample"
+   },
+   {
+    "at": "2026-10-19T06:46:44Z",
+    "action": "OPTIONS_READY",
+    "actor": "system:analysis"
+   }
+  ]
+ },
+ "r-sample-2295": {
+  "disruption_id": "r-sample-2295",
+  "status": "OPTIONS_READY",
+  "summary": "S. Nair (C-2295) unavailable (sick): P-2209 First Officer: Assign First Officer P. Sharma (C-3312) (reserve callout), \u20b921,740",
+  "severity": {
+   "level": "medium",
+   "reasons": [
+    "483 passengers booked"
+   ]
+  },
+  "report_type": "crew_unavailable",
+  "reported_utc": "2026-10-12T17:30:00Z",
+  "reported_by": "u-sample",
+  "details": {
+   "crew_id": "C-2295",
+   "from_date": "2026-10-13",
+   "to_date": "2026-10-13",
+   "reason": "sick"
+  },
+  "desks": [
+   {
+    "desk_id": "desk-2",
+    "controller": "Rohit Malhotra"
+   }
+  ],
+  "yours": true,
+  "handling": {
+   "kind": "recrew",
+   "text": "Crew control re-crews 1 seat(s): choose cover below, then a different approver approves it."
+  },
+  "airlines": [
+   {
+    "code": "DX",
+    "name": "Deccan Express",
+    "color": "#0284c7"
+   }
+  ],
+  "notices": [],
+  "stands": [],
+  "next_at_gate": [],
+  "flights": [],
+  "delays": [],
+  "notes": [],
+  "seats": [
+   {
+    "pairing_id": "P-2209",
+    "role": "First Officer",
+    "crew_out": "C-2295",
+    "status": "options",
+    "note": "",
+    "legal_options": 7,
+    "excluded": 2,
+    "cancellation_cost_inr": 1000000,
+    "cancellation_multiple": 46,
+    "delay_hours": 0,
+    "delay_date": null,
+    "impact": {
+     "affected_dates": [
+      "2026-10-13"
+     ],
+     "uncovered_flights": [
+      "DX421-2026-10-13",
+      "DX422-2026-10-13",
+      "DX423-2026-10-13",
+      "DX424-2026-10-13"
+     ],
+     "at_risk_flights": [],
+     "passengers": 483,
+     "flown_before": []
+    },
+    "options": [
+     {
+      "rank": 1,
+      "action": "Assign First Officer P. Sharma (C-3312) (reserve callout)",
+      "strategy": "reserve_callout",
+      "crew_id": "C-3312",
+      "name": "P. Sharma",
+      "crew_rank": "First Officer",
+      "cost_inr": 21740,
+      "cost_breakdown": {
+       "callout": 18500,
+       "seniority_allowance": 2700,
+       "travel": 540
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 2,
+      "action": "Assign First Officer A. Kulkarni (C-5788) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-5788",
+      "name": "A. Kulkarni",
+      "crew_rank": "First Officer",
+      "cost_inr": 31920,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 6300,
+       "travel": 1620
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 3,
+      "action": "Assign First Officer P. Kapoor (C-5375) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-5375",
+      "name": "P. Kapoor",
+      "crew_rank": "First Officer",
+      "cost_inr": 32280,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 7200,
+       "travel": 1080
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 4,
+      "action": "Assign First Officer R. Menon (C-5363) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-5363",
+      "name": "R. Menon",
+      "crew_rank": "First Officer",
+      "cost_inr": 33630,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 7650,
+       "travel": 1980
+      },
+      "delay_hours": 0
+     },
+     {
+      "rank": 5,
+      "action": "Assign First Officer R. Naidu (C-3116) (day-off callout)",
+      "strategy": "day_off_callout",
+      "crew_id": "C-3116",
+      "name": "R. Naidu",
+      "crew_rank": "First Officer",
+      "cost_inr": 33990,
+      "cost_breakdown": {
+       "callout": 24000,
+       "seniority_allowance": 8550,
+       "travel": 1440
+      },
+      "delay_hours": 0
+     }
+    ],
+    "context": {
+     "aircraft": "VT-DXB",
+     "aircraft_type": "A320",
+     "base": "BLR",
+     "dates": [
+      "2026-10-13"
+     ],
+     "affected_dates": [
+      "2026-10-13"
+     ],
+     "requirement": "A First Officer rated on the A320, legal for every rule on the affected days.",
+     "flights": [
+      {
+       "flight_id": "DX421-2026-10-13",
+       "flight_no": "DX421",
+       "date": "2026-10-13",
+       "from": "BLR",
+       "to": "CCU",
+       "dep_utc": "2026-10-13T03:00:00Z",
+       "arr_utc": "2026-10-13T05:30:00Z",
+       "seats": 162,
+       "booked": 119,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "DX422-2026-10-13",
+       "flight_no": "DX422",
+       "date": "2026-10-13",
+       "from": "CCU",
+       "to": "BLR",
+       "dep_utc": "2026-10-13T06:15:00Z",
+       "arr_utc": "2026-10-13T08:45:00Z",
+       "seats": 162,
+       "booked": 116,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "DX423-2026-10-13",
+       "flight_no": "DX423",
+       "date": "2026-10-13",
+       "from": "BLR",
+       "to": "HYD",
+       "dep_utc": "2026-10-13T09:30:00Z",
+       "arr_utc": "2026-10-13T10:45:00Z",
+       "seats": 162,
+       "booked": 119,
+       "state": "uncrewed"
+      },
+      {
+       "flight_id": "DX424-2026-10-13",
+       "flight_no": "DX424",
+       "date": "2026-10-13",
+       "from": "HYD",
+       "to": "BLR",
+       "dep_utc": "2026-10-13T11:30:00Z",
+       "arr_utc": "2026-10-13T12:45:00Z",
+       "seats": 162,
+       "booked": 129,
+       "state": "uncrewed"
+      }
+     ],
+     "crew": [
+      {
+       "crew_id": "C-1938",
+       "name": "N. Reddy",
+       "role": "Captain",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-2295",
+       "name": "S. Nair",
+       "role": "First Officer",
+       "state": "out"
+      },
+      {
+       "crew_id": "C-5158",
+       "name": "K. Krishnan",
+       "role": "Senior Cabin Crew",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-2252",
+       "name": "S. Kapoor",
+       "role": "Cabin Crew",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-5906",
+       "name": "V. Naidu",
+       "role": "Cabin Crew",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-3973",
+       "name": "I. Pillai",
+       "role": "Cabin Crew",
+       "state": "on"
+      },
+      {
+       "crew_id": "C-3545",
+       "name": "D. Malhotra",
+       "role": "Cabin Crew",
+       "state": "on"
+      }
+     ]
+    },
+    "re_crewed": null,
+    "live": {
+     "options": [
+      {
+       "rank": 1,
+       "action": "Assign First Officer P. Sharma (C-3312) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3312",
+       "name": "P. Sharma",
+       "crew_rank": "First Officer",
+       "cost_inr": 21740,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 2700,
+        "travel": 540
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 30,
+       "risk_score": 0.21,
+       "experience_years": 14,
+       "resilience": 66.7
+      },
+      {
+       "rank": 2,
+       "action": "Assign First Officer A. Kulkarni (C-5788) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-5788",
+       "name": "A. Kulkarni",
+       "crew_rank": "First Officer",
+       "cost_inr": 31920,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 6300,
+        "travel": 1620
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 85,
+       "risk_score": 0.03,
+       "experience_years": 17,
+       "resilience": 100.0
+      },
+      {
+       "rank": 3,
+       "action": "Assign First Officer P. Kapoor (C-5375) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-5375",
+       "name": "P. Kapoor",
+       "crew_rank": "First Officer",
+       "cost_inr": 32280,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 7200,
+        "travel": 1080
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 60,
+       "risk_score": 0.2,
+       "experience_years": 24,
+       "resilience": 100.0
+      },
+      {
+       "rank": 4,
+       "action": "Assign First Officer R. Menon (C-5363) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-5363",
+       "name": "R. Menon",
+       "crew_rank": "First Officer",
+       "cost_inr": 33630,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 7650,
+        "travel": 1980
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 105,
+       "risk_score": 0.07,
+       "experience_years": 20,
+       "resilience": 100.0
+      },
+      {
+       "rank": 5,
+       "action": "Assign First Officer R. Naidu (C-3116) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-3116",
+       "name": "R. Naidu",
+       "crew_rank": "First Officer",
+       "cost_inr": 33990,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 8550,
+        "travel": 1440
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 75,
+       "risk_score": 0.2,
+       "experience_years": 23,
+       "resilience": 100.0
+      },
+      {
+       "rank": 6,
+       "action": "Assign First Officer N. Joshi (C-2791) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-2791",
+       "name": "N. Joshi",
+       "crew_rank": "First Officer",
+       "cost_inr": 34170,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 9450,
+        "travel": 720
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 40,
+       "risk_score": 0.28,
+       "experience_years": 23,
+       "resilience": 100.0
+      },
+      {
+       "rank": 7,
+       "action": "Assign First Officer V. Reddy (C-2888) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-2888",
+       "name": "V. Reddy",
+       "crew_rank": "First Officer",
+       "cost_inr": 34710,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 8550,
+        "travel": 2160
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 120,
+       "risk_score": 0.19,
+       "experience_years": 23,
+       "resilience": 100.0
+      }
+     ],
+     "policies": {
+      "cheapest": {
+       "rank": 1,
+       "action": "Assign First Officer P. Sharma (C-3312) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3312",
+       "name": "P. Sharma",
+       "crew_rank": "First Officer",
+       "cost_inr": 21740,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 2700,
+        "travel": 540
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 30,
+       "risk_score": 0.21,
+       "experience_years": 14,
+       "resilience": 66.7
+      },
+      "least_delay": {
+       "rank": 1,
+       "action": "Assign First Officer P. Sharma (C-3312) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3312",
+       "name": "P. Sharma",
+       "crew_rank": "First Officer",
+       "cost_inr": 21740,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 2700,
+        "travel": 540
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 30,
+       "risk_score": 0.21,
+       "experience_years": 14,
+       "resilience": 66.7
+      },
+      "keeps_most_reserve_cover": {
+       "rank": 2,
+       "action": "Assign First Officer A. Kulkarni (C-5788) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-5788",
+       "name": "A. Kulkarni",
+       "crew_rank": "First Officer",
+       "cost_inr": 31920,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 6300,
+        "travel": 1620
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 85,
+       "risk_score": 0.03,
+       "experience_years": 17,
+       "resilience": 100.0
+      }
+     },
+     "strategies": [
+      {
+       "rank": 1,
+       "action": "Assign First Officer P. Sharma (C-3312) (reserve callout)",
+       "strategy": "reserve_callout",
+       "crew_id": "C-3312",
+       "name": "P. Sharma",
+       "crew_rank": "First Officer",
+       "cost_inr": 21740,
+       "cost_breakdown": {
+        "callout": 18500,
+        "seniority_allowance": 2700,
+        "travel": 540
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 30,
+       "risk_score": 0.21,
+       "experience_years": 14,
+       "resilience": 66.7
+      },
+      {
+       "rank": 2,
+       "action": "Assign First Officer A. Kulkarni (C-5788) (day-off callout)",
+       "strategy": "day_off_callout",
+       "crew_id": "C-5788",
+       "name": "A. Kulkarni",
+       "crew_rank": "First Officer",
+       "cost_inr": 31920,
+       "cost_breakdown": {
+        "callout": 24000,
+        "seniority_allowance": 6300,
+        "travel": 1620
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": "BLR",
+       "reachability_minutes": 85,
+       "risk_score": 0.03,
+       "experience_years": 17,
+       "resilience": 100.0
+      },
+      {
+       "rank": 8,
+       "action": "Cancel all 4 flights of the pairing",
+       "strategy": "cancel",
+       "crew_id": null,
+       "name": "Cancel all 4 flights of the pairing",
+       "crew_rank": null,
+       "cost_inr": 1000000,
+       "cost_breakdown": {
+        "cancellation": 1000000
+       },
+       "delay_hours": 0.0,
+       "positioning_flight": null,
+       "base": null,
+       "reachability_minutes": null,
+       "risk_score": null,
+       "experience_years": null,
+       "resilience": null
+      }
+     ],
+     "cancellation": {
+      "rank": 8,
+      "action": "Cancel all 4 flights of the pairing",
+      "strategy": "cancel",
+      "crew_id": null,
+      "name": "Cancel all 4 flights of the pairing",
+      "crew_rank": null,
+      "cost_inr": 1000000,
+      "cost_breakdown": {
+       "cancellation": 1000000
+      },
+      "delay_hours": 0.0,
+      "positioning_flight": null,
+      "base": null,
+      "reachability_minutes": null,
+      "risk_score": null,
+      "experience_years": null,
+      "resilience": null
+     },
+     "short_crew": null,
+     "legal_options": 7,
+     "funnel": [
+      {
+       "stage": "considered",
+       "remaining": 9,
+       "dropped": 0,
+       "reason": ""
+      },
+      {
+       "stage": "qualified",
+       "remaining": 8,
+       "dropped": 1,
+       "reason": "not rated on the aircraft or not active"
+      },
+      {
+       "stage": "rested",
+       "remaining": 7,
+       "dropped": 1,
+       "reason": "rest conflict or already rostered"
+      },
+      {
+       "stage": "legal",
+       "remaining": 7,
+       "dropped": 0,
+       "reason": ""
+      }
+     ],
+     "excluded": [
+      {
+       "crew_id": "C-4104",
+       "name": "N. Gupta",
+       "stage": "qualified",
+       "rule_ids": [
+        "RULE-QUAL-05"
+       ],
+       "reasons": [
+        "status is training, not active"
+       ]
+      },
+      {
+       "crew_id": "C-4763",
+       "name": "S. Reddy",
+       "stage": "rested",
+       "rule_ids": [
+        "RULE-REST-04"
+       ],
+       "reasons": [
+        "double-booked: P-2202 overlaps on 2026-10-13"
+       ]
+      }
+     ],
+     "excluded_count": 2
+    },
+    "reserves": [
+     {
+      "base": "BLR",
+      "on_call": 3
+     },
+     {
+      "base": "DEL",
+      "on_call": 1
+     }
+    ]
+   }
+  ],
+  "joint_plan": null,
+  "contention": {},
+  "same_seat": [],
+  "unavailable_now": {},
+  "suggestions": [],
+  "plans": [],
+  "audit": [
+   {
+    "at": "2026-10-12T18:00:00Z",
+    "action": "REPORTED",
+    "actor": "u-sample"
+   },
+   {
+    "at": "2026-10-19T06:46:42Z",
+    "action": "OPTIONS_READY",
+    "actor": "system:analysis"
+   }
+  ]
+ }
+}

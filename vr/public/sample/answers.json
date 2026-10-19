@@ -1,0 +1,152 @@
+{
+ "r-sample-1042": [
+  {
+   "question": "C-1042 is sick for P-2291. Who covers?",
+   "answer": "For the Captain seat on P-2291 with C-1042 out, the cheapest legal choice is to assign Captain D. Reddy (C-3310) (reserve callout), \u20b923,090. Next: assign Captain N. Chandra (C-3983) (day-off callout), \u20b930,660; assign Captain P. Reddy (C-5566) (day-off callout), \u20b931,740. 4 legal options in all. Cancelling instead costs \u20b91,500,000, 65 times as much.",
+   "verified": true,
+   "source": "template",
+   "awaiting": null,
+   "intent": "FIND_REPLACEMENT",
+   "notes": [],
+   "model_calls": 0,
+   "models": {
+    "state": "closed",
+    "failures": 0,
+    "trips": 0,
+    "retry_in_seconds": 0
+   }
+  },
+  {
+   "question": "Is C-1017 legal for P-2291?",
+   "answer": "A. Verma (C-1017) is not legal for P-2291. RULE-REST-04 fails: only 11.0h rest before P-2217 on 2026-10-14; RULE-REST-04 fails: double-booked: P-2217 overlaps on 2026-10-14.",
+   "verified": true,
+   "source": "template",
+   "awaiting": null,
+   "intent": "CHECK_LEGALITY",
+   "notes": [],
+   "model_calls": 0,
+   "models": {
+    "state": "closed",
+    "failures": 0,
+    "trips": 0,
+    "retry_in_seconds": 0
+   }
+  },
+  {
+   "question": "How many duty hours does C-3310 have?",
+   "answer": "D. Reddy (C-3310) as of 2026-10-12: 0 duty hours over the 7 days 2026-10-06 to 2026-10-12, leaving 60 under the 60-hour limit. 9.34 flight hours over the 28 days 2026-09-15 to 2026-10-12, leaving 90.66 under 100. That day alone: 0 duty hours.",
+   "verified": true,
+   "source": "template",
+   "awaiting": null,
+   "intent": "LOOKUP_DUTY_CLOCK",
+   "notes": [],
+   "model_calls": 0,
+   "models": {
+    "state": "closed",
+    "failures": 0,
+    "trips": 0,
+    "retry_in_seconds": 0
+   }
+  }
+ ],
+ "r-sample-1600": [
+  {
+   "question": "C-1600 is sick for P-2223. Who covers?",
+   "answer": "For the Captain seat on P-2223 with C-1600 out, the cheapest legal choice is to assign Captain M. Pillai (C-3315) (reserve callout), \u20b921,110. Next: assign Captain H. Naidu (C-2091) (day-off callout), \u20b926,700; assign Captain D. Verma (C-5392) (day-off callout), \u20b927,870. 6 legal options in all. Cancelling instead costs \u20b91,000,000, 47 times as much.",
+   "verified": true,
+   "source": "template",
+   "awaiting": null,
+   "intent": "FIND_REPLACEMENT",
+   "notes": [],
+   "model_calls": 0,
+   "models": {
+    "state": "closed",
+    "failures": 0,
+    "trips": 0,
+    "retry_in_seconds": 0
+   }
+  },
+  {
+   "question": "Is C-3721 legal for P-2223?",
+   "answer": "R. Kapoor (C-3721) is not legal for P-2223. RULE-REST-04 fails: double-booked: P-2230 overlaps on 2026-10-13.",
+   "verified": true,
+   "source": "template",
+   "awaiting": null,
+   "intent": "CHECK_LEGALITY",
+   "notes": [],
+   "model_calls": 0,
+   "models": {
+    "state": "closed",
+    "failures": 0,
+    "trips": 0,
+    "retry_in_seconds": 0
+   }
+  },
+  {
+   "question": "How many duty hours does C-3315 have?",
+   "answer": "M. Pillai (C-3315) as of 2026-10-12: 15.15 duty hours over the 7 days 2026-10-06 to 2026-10-12, leaving 44.85 under the 60-hour limit. 51.93 flight hours over the 28 days 2026-09-15 to 2026-10-12, leaving 48.07 under 100. That day alone: 8.13 duty hours.",
+   "verified": true,
+   "source": "template",
+   "awaiting": null,
+   "intent": "LOOKUP_DUTY_CLOCK",
+   "notes": [],
+   "model_calls": 0,
+   "models": {
+    "state": "closed",
+    "failures": 0,
+    "trips": 0,
+    "retry_in_seconds": 0
+   }
+  }
+ ],
+ "r-sample-2295": [
+  {
+   "question": "C-2295 is sick for P-2209. Who covers?",
+   "answer": "For the First Officer seat on P-2209 with C-2295 out, the cheapest legal choice is to assign First Officer P. Sharma (C-3312) (reserve callout), \u20b921,740. Next: assign First Officer A. Kulkarni (C-5788) (day-off callout), \u20b931,920; assign First Officer P. Kapoor (C-5375) (day-off callout), \u20b932,280. 7 legal options in all. Cancelling instead costs \u20b91,000,000, 46 times as much.",
+   "verified": true,
+   "source": "template",
+   "awaiting": null,
+   "intent": "FIND_REPLACEMENT",
+   "notes": [],
+   "model_calls": 0,
+   "models": {
+    "state": "closed",
+    "failures": 0,
+    "trips": 0,
+    "retry_in_seconds": 0
+   }
+  },
+  {
+   "question": "Is C-4104 legal for P-2209?",
+   "answer": "N. Gupta (C-4104) is not legal for P-2209. RULE-QUAL-05 fails: status is training, not active.",
+   "verified": true,
+   "source": "template",
+   "awaiting": null,
+   "intent": "CHECK_LEGALITY",
+   "notes": [],
+   "model_calls": 0,
+   "models": {
+    "state": "closed",
+    "failures": 0,
+    "trips": 0,
+    "retry_in_seconds": 0
+   }
+  },
+  {
+   "question": "How many duty hours does C-3312 have?",
+   "answer": "P. Sharma (C-3312) as of 2026-10-12: 8.39 duty hours over the 7 days 2026-10-06 to 2026-10-12, leaving 51.61 under the 60-hour limit. 31.46 flight hours over the 28 days 2026-09-15 to 2026-10-12, leaving 68.54 under 100. That day alone: 0 duty hours.",
+   "verified": true,
+   "source": "template",
+   "awaiting": null,
+   "intent": "LOOKUP_DUTY_CLOCK",
+   "notes": [],
+   "model_calls": 0,
+   "models": {
+    "state": "closed",
+    "failures": 0,
+    "trips": 0,
+    "retry_in_seconds": 0
+   }
+  }
+ ]
+}

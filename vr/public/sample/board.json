@@ -1,0 +1,363 @@
+{
+ "as_of": "2026-10-19T06:46:48Z",
+ "today": "2026-10-12",
+ "latest": [
+  {
+   "at": "2026-10-19T06:46:48Z",
+   "event": "SUBMITTED",
+   "title": "Waiting for approval",
+   "text": "A plan for C-1042 unavailable 2026-10-13 to 2026-10-14 (sick) is waiting for approval, from rohit.malhotra.",
+   "disruption_id": "r-sample-1042",
+   "severity": "medium"
+  },
+  {
+   "at": "2026-10-19T06:46:44Z",
+   "event": "OPTIONS_READY",
+   "title": "New on Desk 2",
+   "text": "C-1600 unavailable 2026-10-13 (sick). Recommended cover for P-2223 Captain: M. Pillai (C-3315), a reserve callout, \u20b921,110. On Rohit Malhotra's desk.",
+   "disruption_id": "r-sample-1600",
+   "severity": "low"
+  },
+  {
+   "at": "2026-10-19T06:46:42Z",
+   "event": "OPTIONS_READY",
+   "title": "New on Desk 2",
+   "text": "Medium severity. C-2295 unavailable 2026-10-13 (sick). Recommended cover for P-2209 First Officer: P. Sharma (C-3312), a reserve callout, \u20b921,740. On Rohit Malhotra's desk.",
+   "disruption_id": "r-sample-2295",
+   "severity": "medium"
+  }
+ ],
+ "departures": [
+  {
+   "flight_no": "DX401",
+   "from": "BLR",
+   "to": "DEL",
+   "dep_utc": "2026-10-13T02:30:00Z",
+   "aircraft": "VT-DXA",
+   "airline": "DX",
+   "state": "on plan"
+  },
+  {
+   "flight_no": "DX421",
+   "from": "BLR",
+   "to": "CCU",
+   "dep_utc": "2026-10-13T03:00:00Z",
+   "aircraft": "VT-DXB",
+   "airline": "DX",
+   "state": "affected"
+  },
+  {
+   "flight_no": "KS431",
+   "from": "BLR",
+   "to": "BOM",
+   "dep_utc": "2026-10-13T03:30:00Z",
+   "aircraft": "VT-DXD",
+   "airline": "KS",
+   "state": "on plan"
+  },
+  {
+   "flight_no": "NG451",
+   "from": "BLR",
+   "to": "COK",
+   "dep_utc": "2026-10-13T04:00:00Z",
+   "aircraft": "VT-DXE",
+   "airline": "NG",
+   "state": "affected"
+  },
+  {
+   "flight_no": "NG461",
+   "from": "BLR",
+   "to": "HYD",
+   "dep_utc": "2026-10-13T05:00:00Z",
+   "aircraft": "VT-DXF",
+   "airline": "NG",
+   "state": "on plan"
+  },
+  {
+   "flight_no": "DX402",
+   "from": "DEL",
+   "to": "BLR",
+   "dep_utc": "2026-10-13T06:00:00Z",
+   "aircraft": "VT-DXA",
+   "airline": "DX",
+   "state": "on plan"
+  },
+  {
+   "flight_no": "KS432",
+   "from": "BOM",
+   "to": "BLR",
+   "dep_utc": "2026-10-13T06:00:00Z",
+   "aircraft": "VT-DXD",
+   "airline": "KS",
+   "state": "on plan"
+  },
+  {
+   "flight_no": "NG452",
+   "from": "COK",
+   "to": "BLR",
+   "dep_utc": "2026-10-13T06:00:00Z",
+   "aircraft": "VT-DXE",
+   "airline": "NG",
+   "state": "affected"
+  }
+ ],
+ "reserve_cover": [
+  {
+   "airline": "DX",
+   "base": "BLR",
+   "rank": "Cabin Crew",
+   "on_call": 2
+  },
+  {
+   "airline": "DX",
+   "base": "BLR",
+   "rank": "Captain",
+   "on_call": 1
+  },
+  {
+   "airline": "DX",
+   "base": "BLR",
+   "rank": "First Officer",
+   "on_call": 1
+  },
+  {
+   "airline": "DX",
+   "base": "BLR",
+   "rank": "Senior Cabin Crew",
+   "on_call": 1
+  },
+  {
+   "airline": "DX",
+   "base": "DEL",
+   "rank": "Captain",
+   "on_call": 1
+  },
+  {
+   "airline": "DX",
+   "base": "DEL",
+   "rank": "Senior Cabin Crew",
+   "on_call": 1
+  },
+  {
+   "airline": "KS",
+   "base": "BLR",
+   "rank": "Cabin Crew",
+   "on_call": 1
+  },
+  {
+   "airline": "KS",
+   "base": "BLR",
+   "rank": "Captain",
+   "on_call": 1
+  },
+  {
+   "airline": "KS",
+   "base": "BLR",
+   "rank": "First Officer",
+   "on_call": 1
+  },
+  {
+   "airline": "KS",
+   "base": "BLR",
+   "rank": "Senior Cabin Crew",
+   "on_call": 1
+  },
+  {
+   "airline": "KS",
+   "base": "DEL",
+   "rank": "Cabin Crew",
+   "on_call": 1
+  },
+  {
+   "airline": "KS",
+   "base": "DEL",
+   "rank": "First Officer",
+   "on_call": 1
+  },
+  {
+   "airline": "NG",
+   "base": "BLR",
+   "rank": "Cabin Crew",
+   "on_call": 1
+  },
+  {
+   "airline": "NG",
+   "base": "BLR",
+   "rank": "Captain",
+   "on_call": 1
+  },
+  {
+   "airline": "NG",
+   "base": "BLR",
+   "rank": "First Officer",
+   "on_call": 1
+  }
+ ],
+ "system": {
+  "models": {
+   "state": "closed",
+   "failures": 0,
+   "trips": 0,
+   "retry_in_seconds": 0
+  }
+ },
+ "counts": {
+  "high": 0,
+  "medium": 3,
+  "low": 0,
+  "escalated": 0,
+  "open": 3
+ },
+ "desks": [
+  {
+   "desk_id": "desk-1",
+   "controller": "Ananya Iyer",
+   "open": 0,
+   "high": 0,
+   "escalated": 0,
+   "submitted": 0
+  },
+  {
+   "desk_id": "desk-2",
+   "controller": "Rohit Malhotra",
+   "open": 3,
+   "high": 0,
+   "escalated": 0,
+   "submitted": 1
+  },
+  {
+   "desk_id": "desk-3",
+   "controller": "Divya Rao",
+   "open": 0,
+   "high": 0,
+   "escalated": 0,
+   "submitted": 0
+  }
+ ],
+ "disruptions": [
+  {
+   "disruption_id": "r-sample-1600",
+   "status": "OPTIONS_READY",
+   "handling": "recrew",
+   "what": "C-1600 unavailable 2026-10-13 (sick)",
+   "report_type": "crew_unavailable",
+   "severity": "medium",
+   "reasons": [
+    "flies tomorrow"
+   ],
+   "desk": {
+    "desk_id": "desk-2",
+    "controller": "Rohit Malhotra"
+   },
+   "escalated": false,
+   "waiting_minutes": 0,
+   "airlines": [
+    "NG"
+   ],
+   "cover": [
+    {
+     "seat": "P-2223 Captain",
+     "who": "M. Pillai (C-3315)",
+     "how": "Reserve callout",
+     "cost_inr": 21110
+    }
+   ],
+   "impact": {
+    "flights": 4,
+    "passengers": 229,
+    "flight_ids": [
+     "NG451-2026-10-13",
+     "NG452-2026-10-13",
+     "NG453-2026-10-13",
+     "NG454-2026-10-13"
+    ]
+   }
+  },
+  {
+   "disruption_id": "r-sample-2295",
+   "status": "OPTIONS_READY",
+   "handling": "recrew",
+   "what": "C-2295 unavailable 2026-10-13 (sick)",
+   "report_type": "crew_unavailable",
+   "severity": "medium",
+   "reasons": [
+    "483 passengers booked",
+    "flies tomorrow"
+   ],
+   "desk": {
+    "desk_id": "desk-2",
+    "controller": "Rohit Malhotra"
+   },
+   "escalated": false,
+   "waiting_minutes": 0,
+   "airlines": [
+    "DX"
+   ],
+   "cover": [
+    {
+     "seat": "P-2209 First Officer",
+     "who": "P. Sharma (C-3312)",
+     "how": "Reserve callout",
+     "cost_inr": 21740
+    }
+   ],
+   "impact": {
+    "flights": 4,
+    "passengers": 483,
+    "flight_ids": [
+     "DX421-2026-10-13",
+     "DX422-2026-10-13",
+     "DX423-2026-10-13",
+     "DX424-2026-10-13"
+    ]
+   }
+  },
+  {
+   "disruption_id": "r-sample-1042",
+   "status": "SUBMITTED",
+   "handling": "recrew",
+   "what": "C-1042 unavailable 2026-10-13 to 2026-10-14 (sick)",
+   "report_type": "crew_unavailable",
+   "severity": "medium",
+   "reasons": [
+    "841 passengers booked",
+    "flies tomorrow"
+   ],
+   "desk": {
+    "desk_id": "desk-2",
+    "controller": "Rohit Malhotra"
+   },
+   "escalated": false,
+   "waiting_minutes": 0,
+   "airlines": [
+    "KS"
+   ],
+   "cover": [
+    {
+     "seat": "P-2291 Captain",
+     "who": "D. Reddy (C-3310)",
+     "how": "Reserve callout",
+     "cost_inr": 23090
+    }
+   ],
+   "impact": {
+    "flights": 6,
+    "passengers": 841,
+    "flight_ids": [
+     "KS412-2026-10-13",
+     "KS413-2026-10-13",
+     "KS588-2026-10-13",
+     "KS589-2026-10-14",
+     "KS590-2026-10-14",
+     "KS591-2026-10-14"
+    ]
+   }
+  }
+ ],
+ "day": {
+  "flights": 21,
+  "passengers": 2362,
+  "crew_out": 0,
+  "reserves_on_call": 16
+ }
+}

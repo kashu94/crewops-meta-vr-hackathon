@@ -1,0 +1,2302 @@
+{
+ "C-3310/P-2291": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-3310",
+   "name": "D. Reddy",
+   "rank": "Captain",
+   "pairing_id": "P-2291",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 9.5h of 12.5h (3 sectors)",
+     "used": 9.5,
+     "limit": 12.5,
+     "headroom": 3.0,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "9.5h of 60h/7d on 2026-10-13",
+     "used": 9.5,
+     "limit": 60.0,
+     "headroom": 50.5,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "15.59h of 100h/28d on 2026-10-13",
+     "used": 15.59,
+     "limit": 100.0,
+     "headroom": 84.41,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-14",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 10.75h of 12.5h (3 sectors)",
+     "used": 10.75,
+     "limit": 12.5,
+     "headroom": 1.75,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "20.25h of 60h/7d on 2026-10-14",
+     "used": 20.25,
+     "limit": 60.0,
+     "headroom": 39.75,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "23.34h of 100h/28d on 2026-10-14",
+     "used": 23.34,
+     "limit": 100.0,
+     "headroom": 76.66,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-14"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": true,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-3983/P-2291": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-3983",
+   "name": "N. Chandra",
+   "rank": "Captain",
+   "pairing_id": "P-2291",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 9.5h of 12.5h (3 sectors)",
+     "used": 9.5,
+     "limit": 12.5,
+     "headroom": 3.0,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "39.11h of 60h/7d on 2026-10-13",
+     "used": 39.11,
+     "limit": 60.0,
+     "headroom": 20.89,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "67.91h of 100h/28d on 2026-10-13",
+     "used": 67.91,
+     "limit": 100.0,
+     "headroom": 32.09,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-14",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 10.75h of 12.5h (3 sectors)",
+     "used": 10.75,
+     "limit": 12.5,
+     "headroom": 1.75,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "49.86h of 60h/7d on 2026-10-14",
+     "used": 49.86,
+     "limit": 60.0,
+     "headroom": 10.14,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "75.66h of 100h/28d on 2026-10-14",
+     "used": 75.66,
+     "limit": 100.0,
+     "headroom": 24.34,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-14"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-5566/P-2291": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-5566",
+   "name": "P. Reddy",
+   "rank": "Captain",
+   "pairing_id": "P-2291",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 9.5h of 12.5h (3 sectors)",
+     "used": 9.5,
+     "limit": 12.5,
+     "headroom": 3.0,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "29.75h of 60h/7d in the 7 days ending 2026-10-16",
+     "used": 29.75,
+     "limit": 60.0,
+     "headroom": 30.25,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "66.97h of 100h/28d in the 28 days ending 2026-10-16",
+     "used": 66.97,
+     "limit": 100.0,
+     "headroom": 33.03,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-14",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 10.75h of 12.5h (3 sectors)",
+     "used": 10.75,
+     "limit": 12.5,
+     "headroom": 1.75,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "40.5h of 60h/7d in the 7 days ending 2026-10-16",
+     "used": 40.5,
+     "limit": 60.0,
+     "headroom": 19.5,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "74.72h of 100h/28d in the 28 days ending 2026-10-16",
+     "used": 74.72,
+     "limit": 100.0,
+     "headroom": 25.28,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-14"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-1526/P-2291": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-1526",
+   "name": "N. Sen",
+   "rank": "Captain",
+   "pairing_id": "P-2291",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 9.5h of 12.5h (3 sectors)",
+     "used": 9.5,
+     "limit": 12.5,
+     "headroom": 3.0,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "38.96h of 60h/7d in the 7 days ending 2026-10-18",
+     "used": 38.96,
+     "limit": 60.0,
+     "headroom": 21.04,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "76.55h of 100h/28d in the 28 days ending 2026-10-18",
+     "used": 76.55,
+     "limit": 100.0,
+     "headroom": 23.45,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-14",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 10.75h of 12.5h (3 sectors)",
+     "used": 10.75,
+     "limit": 12.5,
+     "headroom": 1.75,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "49.71h of 60h/7d in the 7 days ending 2026-10-18",
+     "used": 49.71,
+     "limit": 60.0,
+     "headroom": 10.29,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "84.3h of 100h/28d in the 28 days ending 2026-10-18",
+     "used": 84.3,
+     "limit": 100.0,
+     "headroom": 15.7,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-14"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-1017/P-2291": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-1017",
+   "name": "A. Verma",
+   "rank": "Captain",
+   "pairing_id": "P-2291",
+   "legal": false,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "FAIL",
+     "detail": "only 11.0h rest before P-2217 on 2026-10-14",
+     "used": 11.0,
+     "limit": 12.0,
+     "headroom": -1.0,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "FAIL",
+     "detail": "double-booked: P-2217 overlaps on 2026-10-14",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    }
+   ],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 9.5h of 12.5h (3 sectors)",
+     "used": 9.5,
+     "limit": 12.5,
+     "headroom": 3.0,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "39.59h of 60h/7d in the 7 days ending 2026-10-17",
+     "used": 39.59,
+     "limit": 60.0,
+     "headroom": 20.41,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "73.15h of 100h/28d in the 28 days ending 2026-10-14",
+     "used": 73.15,
+     "limit": 100.0,
+     "headroom": 26.85,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "FAIL",
+     "detail": "only 11.0h rest before P-2217 on 2026-10-14",
+     "used": 11.0,
+     "limit": 12.0,
+     "headroom": -1.0,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-14",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 10.75h of 12.5h (3 sectors)",
+     "used": 10.75,
+     "limit": 12.5,
+     "headroom": 1.75,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "50.34h of 60h/7d in the 7 days ending 2026-10-17",
+     "used": 50.34,
+     "limit": 60.0,
+     "headroom": 9.66,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "80.9h of 100h/28d on 2026-10-14",
+     "used": 80.9,
+     "limit": 100.0,
+     "headroom": 19.1,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "FAIL",
+     "detail": "double-booked: P-2217 overlaps on 2026-10-14",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-1443/P-2291": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-1443",
+   "name": "K. Sharma",
+   "rank": "Captain",
+   "pairing_id": "P-2291",
+   "legal": false,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "FAIL",
+     "detail": "double-booked: P-2216 overlaps on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 9.5h of 12.5h (3 sectors)",
+     "used": 9.5,
+     "limit": 12.5,
+     "headroom": 3.0,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "37.4h of 60h/7d on 2026-10-13",
+     "used": 37.4,
+     "limit": 60.0,
+     "headroom": 22.6,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "64.97h of 100h/28d in the 28 days ending 2026-10-16",
+     "used": 64.97,
+     "limit": 100.0,
+     "headroom": 35.03,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "FAIL",
+     "detail": "double-booked: P-2216 overlaps on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-14",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 10.75h of 12.5h (3 sectors)",
+     "used": 10.75,
+     "limit": 12.5,
+     "headroom": 1.75,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "48.15h of 60h/7d on 2026-10-14",
+     "used": 48.15,
+     "limit": 60.0,
+     "headroom": 11.85,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "72.72h of 100h/28d in the 28 days ending 2026-10-16",
+     "used": 72.72,
+     "limit": 100.0,
+     "headroom": 27.28,
+     "date": "2026-10-14"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-14"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-3315/P-2223": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-3315",
+   "name": "M. Pillai",
+   "rank": "Captain",
+   "pairing_id": "P-2223",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "ATR72 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 8.25h of 12.0h (4 sectors)",
+     "used": 8.25,
+     "limit": 12.0,
+     "headroom": 3.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "23.4h of 60h/7d on 2026-10-13",
+     "used": 23.4,
+     "limit": 60.0,
+     "headroom": 36.6,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "50.72h of 100h/28d on 2026-10-13",
+     "used": 50.72,
+     "limit": 100.0,
+     "headroom": 49.28,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": true,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-2091/P-2223": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-2091",
+   "name": "H. Naidu",
+   "rank": "Captain",
+   "pairing_id": "P-2223",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "ATR72 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 8.25h of 12.0h (4 sectors)",
+     "used": 8.25,
+     "limit": 12.0,
+     "headroom": 3.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "17.54h of 60h/7d on 2026-10-13",
+     "used": 17.54,
+     "limit": 60.0,
+     "headroom": 42.46,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "4.5h of 100h/28d on 2026-10-13",
+     "used": 4.5,
+     "limit": 100.0,
+     "headroom": 95.5,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-5392/P-2223": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-5392",
+   "name": "D. Verma",
+   "rank": "Captain",
+   "pairing_id": "P-2223",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "ATR72 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 8.25h of 12.0h (4 sectors)",
+     "used": 8.25,
+     "limit": 12.0,
+     "headroom": 3.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "27.68h of 60h/7d on 2026-10-13",
+     "used": 27.68,
+     "limit": 60.0,
+     "headroom": 32.32,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "64.61h of 100h/28d on 2026-10-13",
+     "used": 64.61,
+     "limit": 100.0,
+     "headroom": 35.39,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-2221/P-2223": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-2221",
+   "name": "S. Kulkarni",
+   "rank": "Captain",
+   "pairing_id": "P-2223",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "ATR72 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 8.25h of 12.0h (4 sectors)",
+     "used": 8.25,
+     "limit": 12.0,
+     "headroom": 3.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "34.84h of 60h/7d on 2026-10-13",
+     "used": 34.84,
+     "limit": 60.0,
+     "headroom": 25.16,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "68.05h of 100h/28d in the 28 days ending 2026-10-15",
+     "used": 68.05,
+     "limit": 100.0,
+     "headroom": 31.95,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-3231/P-2223": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-3231",
+   "name": "L. Verma",
+   "rank": "Captain",
+   "pairing_id": "P-2223",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "ATR72 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 8.25h of 12.0h (4 sectors)",
+     "used": 8.25,
+     "limit": 12.0,
+     "headroom": 3.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "25.38h of 60h/7d on 2026-10-13",
+     "used": 25.38,
+     "limit": 60.0,
+     "headroom": 34.62,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "60.95h of 100h/28d on 2026-10-13",
+     "used": 60.95,
+     "limit": 100.0,
+     "headroom": 39.05,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-1671/P-2223": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-1671",
+   "name": "R. Kulkarni",
+   "rank": "Captain",
+   "pairing_id": "P-2223",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "ATR72 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 8.25h of 12.0h (4 sectors)",
+     "used": 8.25,
+     "limit": 12.0,
+     "headroom": 3.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "37.04h of 60h/7d in the 7 days ending 2026-10-15",
+     "used": 37.04,
+     "limit": 60.0,
+     "headroom": 22.96,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "72.63h of 100h/28d in the 28 days ending 2026-10-15",
+     "used": 72.63,
+     "limit": 100.0,
+     "headroom": 27.37,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-3721/P-2223": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-3721",
+   "name": "R. Kapoor",
+   "rank": "Captain",
+   "pairing_id": "P-2223",
+   "legal": false,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "FAIL",
+     "detail": "double-booked: P-2230 overlaps on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "ATR72 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 8.25h of 12.0h (4 sectors)",
+     "used": 8.25,
+     "limit": 12.0,
+     "headroom": 3.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "31.29h of 60h/7d on 2026-10-13",
+     "used": 31.29,
+     "limit": 60.0,
+     "headroom": 28.71,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "59.19h of 100h/28d on 2026-10-13",
+     "used": 59.19,
+     "limit": 100.0,
+     "headroom": 40.81,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "FAIL",
+     "detail": "double-booked: P-2230 overlaps on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-3312/P-2209": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-3312",
+   "name": "P. Sharma",
+   "rank": "First Officer",
+   "pairing_id": "P-2209",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 11.25h of 12.0h (4 sectors)",
+     "used": 11.25,
+     "limit": 12.0,
+     "headroom": 0.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "19.64h of 60h/7d on 2026-10-13",
+     "used": 19.64,
+     "limit": 60.0,
+     "headroom": 40.36,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "38.96h of 100h/28d on 2026-10-13",
+     "used": 38.96,
+     "limit": 100.0,
+     "headroom": 61.04,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": true,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-5788/P-2209": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-5788",
+   "name": "A. Kulkarni",
+   "rank": "First Officer",
+   "pairing_id": "P-2209",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 11.25h of 12.0h (4 sectors)",
+     "used": 11.25,
+     "limit": 12.0,
+     "headroom": 0.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "45.0h of 60h/7d in the 7 days ending 2026-10-18",
+     "used": 45.0,
+     "limit": 60.0,
+     "headroom": 15.0,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "63.83h of 100h/28d in the 28 days ending 2026-10-18",
+     "used": 63.83,
+     "limit": 100.0,
+     "headroom": 36.17,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-5375/P-2209": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-5375",
+   "name": "P. Kapoor",
+   "rank": "First Officer",
+   "pairing_id": "P-2209",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 11.25h of 12.0h (4 sectors)",
+     "used": 11.25,
+     "limit": 12.0,
+     "headroom": 0.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "43.06h of 60h/7d in the 7 days ending 2026-10-17",
+     "used": 43.06,
+     "limit": 60.0,
+     "headroom": 16.94,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "79.35h of 100h/28d in the 28 days ending 2026-10-17",
+     "used": 79.35,
+     "limit": 100.0,
+     "headroom": 20.65,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-5363/P-2209": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-5363",
+   "name": "R. Menon",
+   "rank": "First Officer",
+   "pairing_id": "P-2209",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 11.25h of 12.0h (4 sectors)",
+     "used": 11.25,
+     "limit": 12.0,
+     "headroom": 0.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "42.11h of 60h/7d in the 7 days ending 2026-10-17",
+     "used": 42.11,
+     "limit": 60.0,
+     "headroom": 17.89,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "69.56h of 100h/28d in the 28 days ending 2026-10-17",
+     "used": 69.56,
+     "limit": 100.0,
+     "headroom": 30.44,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-3116/P-2209": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-3116",
+   "name": "R. Naidu",
+   "rank": "First Officer",
+   "pairing_id": "P-2209",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 11.25h of 12.0h (4 sectors)",
+     "used": 11.25,
+     "limit": 12.0,
+     "headroom": 0.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "27.23h of 60h/7d on 2026-10-13",
+     "used": 27.23,
+     "limit": 60.0,
+     "headroom": 32.77,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "7.5h of 100h/28d on 2026-10-13",
+     "used": 7.5,
+     "limit": 100.0,
+     "headroom": 92.5,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-2791/P-2209": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-2791",
+   "name": "N. Joshi",
+   "rank": "First Officer",
+   "pairing_id": "P-2209",
+   "legal": true,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 11.25h of 12.0h (4 sectors)",
+     "used": 11.25,
+     "limit": 12.0,
+     "headroom": 0.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "45.0h of 60h/7d in the 7 days ending 2026-10-18",
+     "used": 45.0,
+     "limit": 60.0,
+     "headroom": 15.0,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "77.29h of 100h/28d in the 28 days ending 2026-10-18",
+     "used": 77.29,
+     "limit": 100.0,
+     "headroom": 22.71,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-4104/P-2209": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-4104",
+   "name": "N. Gupta",
+   "rank": "First Officer",
+   "pairing_id": "P-2209",
+   "legal": false,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "FAIL",
+     "detail": "status is training, not active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "FAIL",
+     "detail": "status is training, not active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 11.25h of 12.0h (4 sectors)",
+     "used": 11.25,
+     "limit": 12.0,
+     "headroom": 0.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "20.69h of 60h/7d on 2026-10-13",
+     "used": 20.69,
+     "limit": 60.0,
+     "headroom": 39.31,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "7.5h of 100h/28d on 2026-10-13",
+     "used": 7.5,
+     "limit": 100.0,
+     "headroom": 92.5,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "PASS",
+     "detail": "at least 12h rest either side",
+     "used": null,
+     "limit": 12.0,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "positioning from DEL to BLR",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": {
+    "flight_id": "DX402-2026-10-13",
+    "from_station": "DEL",
+    "to_station": "BLR",
+    "arrives_utc": "2026-10-13T08:45:00Z",
+    "delay_hours": 7.0
+   },
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ },
+ "C-4763/P-2209": {
+  "tool": "check_legality",
+  "ok": true,
+  "result": {
+   "crew_id": "C-4763",
+   "name": "S. Reddy",
+   "rank": "First Officer",
+   "pairing_id": "P-2209",
+   "legal": false,
+   "rules_checked": [
+    "RULE-FDP-01",
+    "RULE-DUTY-02",
+    "RULE-FLT-03",
+    "RULE-REST-04",
+    "RULE-QUAL-05",
+    "RULE-CERT-06",
+    "RULE-BASE-07"
+   ],
+   "blocking": [
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "FAIL",
+     "detail": "double-booked: P-2202 overlaps on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "verdicts": [
+    {
+     "rule_id": "RULE-QUAL-05",
+     "status": "PASS",
+     "detail": "A320 rated and active",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-CERT-06",
+     "status": "PASS",
+     "detail": "all 4 certifications valid on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FDP-01",
+     "status": "PASS",
+     "detail": "FDP 11.25h of 12.0h (4 sectors)",
+     "used": 11.25,
+     "limit": 12.0,
+     "headroom": 0.75,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-DUTY-02",
+     "status": "PASS",
+     "detail": "43.18h of 60h/7d in the 7 days ending 2026-10-16",
+     "used": 43.18,
+     "limit": 60.0,
+     "headroom": 16.82,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-FLT-03",
+     "status": "PASS",
+     "detail": "79.69h of 100h/28d in the 28 days ending 2026-10-16",
+     "used": 79.69,
+     "limit": 100.0,
+     "headroom": 20.31,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-REST-04",
+     "status": "FAIL",
+     "detail": "double-booked: P-2202 overlaps on 2026-10-13",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    },
+    {
+     "rule_id": "RULE-BASE-07",
+     "status": "PASS",
+     "detail": "own base (BLR)",
+     "used": null,
+     "limit": null,
+     "headroom": null,
+     "date": "2026-10-13"
+    }
+   ],
+   "rostered_on_pairing": false,
+   "on_reserve": false,
+   "positioning": null,
+   "delay_hours": 0.0,
+   "delay_date": null
+  }
+ }
+}

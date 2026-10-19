@@ -1,0 +1,85 @@
+[
+ {
+  "disruption_id": "r-sample-1600",
+  "status": "OPTIONS_READY",
+  "report_type": "crew_unavailable",
+  "reported_utc": "2026-10-12T17:30:00Z",
+  "reported_by": "u-sample",
+  "details": {
+   "crew_id": "C-1600",
+   "from_date": "2026-10-13",
+   "to_date": "2026-10-13",
+   "reason": "sick"
+  },
+  "summary": "S. Rao (C-1600) unavailable (sick): P-2223 Captain: Assign Captain M. Pillai (C-3315) (reserve callout), \u20b921,110",
+  "severity": {
+   "level": "medium",
+   "reasons": [
+    "flies tomorrow"
+   ]
+  },
+  "handling": "recrew",
+  "airlines": [
+   "NG"
+  ],
+  "desks": [
+   "desk-2"
+  ]
+ },
+ {
+  "disruption_id": "r-sample-2295",
+  "status": "OPTIONS_READY",
+  "report_type": "crew_unavailable",
+  "reported_utc": "2026-10-12T17:30:00Z",
+  "reported_by": "u-sample",
+  "details": {
+   "crew_id": "C-2295",
+   "from_date": "2026-10-13",
+   "to_date": "2026-10-13",
+   "reason": "sick"
+  },
+  "summary": "S. Nair (C-2295) unavailable (sick): P-2209 First Officer: Assign First Officer P. Sharma (C-3312) (reserve callout), \u20b921,740",
+  "severity": {
+   "level": "medium",
+   "reasons": [
+    "483 passengers booked",
+    "flies tomorrow"
+   ]
+  },
+  "handling": "recrew",
+  "airlines": [
+   "DX"
+  ],
+  "desks": [
+   "desk-2"
+  ]
+ },
+ {
+  "disruption_id": "r-sample-1042",
+  "status": "SUBMITTED",
+  "report_type": "crew_unavailable",
+  "reported_utc": "2026-10-12T17:30:00Z",
+  "reported_by": "u-sample",
+  "details": {
+   "crew_id": "C-1042",
+   "from_date": "2026-10-13",
+   "to_date": "2026-10-14",
+   "reason": "sick"
+  },
+  "summary": "A. Nair (C-1042) unavailable (sick): P-2291 Captain: Assign Captain D. Reddy (C-3310) (reserve callout), \u20b923,090",
+  "severity": {
+   "level": "medium",
+   "reasons": [
+    "841 passengers booked",
+    "flies tomorrow"
+   ]
+  },
+  "handling": "recrew",
+  "airlines": [
+   "KS"
+  ],
+  "desks": [
+   "desk-2"
+  ]
+ }
+]
