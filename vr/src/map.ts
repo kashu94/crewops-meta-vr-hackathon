@@ -2,13 +2,17 @@ import {
   AdditiveBlending,
   BufferGeometry,
   CircleGeometry,
+  Color,
   createSystem,
   CylinderGeometry,
   DoubleSide,
   effect,
+  Float32BufferAttribute,
   Group,
-  Line,
+  InstancedMesh,
   LineBasicMaterial,
+  LineSegments,
+  Matrix4,
   Mesh,
   MeshBasicMaterial,
   MeshStandardMaterial,
@@ -37,8 +41,10 @@ import type { SeatFlight } from './types.js';
 export const MAP_CENTRE = new Vector3(0, 0, -0.07);
 export const TABLE_RADIUS = 0.3;
 const RADIUS = TABLE_RADIUS;
-const TUBE_SEGMENTS = 64;
-const TUBE_SIDES = 8;
+const TUBE_SEGMENTS = 40;
+const TUBE_SIDES = 6;
+/** Most legs a trip can show packets on (a long trip shows them on its first legs). */
+const MAX_PACKET_LEGS = 12;
 const LEG_DELAY = 0.3;
 const LEG_GROW = 0.6;
 const PACKETS_PER_LEG = 3;
@@ -50,10 +56,11 @@ type Leg = {
   curve: QuadraticBezierCurve3;
   start: number;
   flight: SeatFlight;
-  packets: Mesh[];
 };
 
-type Beacon = { group: Group; beam: Mesh[]; ripple: Mesh; halo: Sprite; phase: number };
+type Beacon = { group: Group; beam: Mesh; ripple: Mesh; halo: Sprite; phase: number };
+
+const HIDDEN = new Matrix4().makeScale(0, 0, 0);
 
 const additive = (colour: string, opacity: number) =>
   new MeshBasicMaterial({
@@ -68,7 +75,12 @@ const additive = (colour: string, opacity: number) =>
 export class MapSystem extends createSystem({}) {
   private table = new Group();
   private trip = new Group();
-  private pins = new Map<string, Mesh>();
+  /** Every station's pin is one instance of one mesh: a single draw call. */
+  private pins!: InstancedMesh;
+  private pinIndex = new Map<string, number>();
+  /** Traffic packets on every leg: one instanced mesh, one draw call. */
+  private packets!: InstancedMesh;
+  private matrix = new Matrix4();
   private legs: Leg[] = [];
   private beacons: Beacon[] = [];
   private aircraft!: Mesh;
@@ -118,21 +130,15 @@ export class MapSystem extends createSystem({}) {
       const count = Math.ceil(grown * TUBE_SEGMENTS) * perSegment;
       leg.core.geometry.setDrawRange(0, count);
       leg.glow.geometry.setDrawRange(0, count);
-      const live = grown >= 1 && (!this.covered ? leg.flight.state !== 'crewed' : true);
-      leg.packets.forEach((packet, i) => {
-        packet.visible = live;
-        if (!live) return;
-        const speed = this.covered ? 0.18 : 0.42;
-        leg.curve.getPoint((this.clock * speed + i / PACKETS_PER_LEG) % 1, packet.position);
-      });
     }
+    this.movePackets(since);
 
     for (const b of this.beacons) {
       const t = (this.clock * 0.55 + b.phase) % 1;
       b.ripple.scale.setScalar(1 + t * 3.2);
       (b.ripple.material as MeshBasicMaterial).opacity = 0.7 * (1 - t);
       const flicker = 0.75 + Math.sin(this.clock * 4 + b.phase * 6) * 0.12;
-      for (const m of b.beam) (m.material as MeshBasicMaterial).opacity = 0.55 * flicker;
+      (b.beam.material as MeshBasicMaterial).opacity = 0.55 * flicker;
     }
 
     this.flyAircraft(since);
@@ -174,19 +180,34 @@ export class MapSystem extends createSystem({}) {
     surface.position.y = 0.0005;
     this.table.add(surface);
 
-    const spoke = new LineBasicMaterial({ color: COLOURS.accent, transparent: true, opacity: 0.18 });
+    // the network's spokes as one set of line segments
+    const segments: Vector3[] = [];
     for (const [a, b] of networkLegs()) {
-      const curve = arc(a, b, 0);
-      this.table.add(new Line(new BufferGeometry().setFromPoints(curve.getPoints(40)), spoke));
+      const points = arc(a, b, 0).getPoints(40);
+      for (let i = 1; i < points.length; i++) segments.push(points[i - 1], points[i]);
     }
+    this.table.add(
+      new LineSegments(
+        new BufferGeometry().setFromPoints(segments),
+        new LineBasicMaterial({ color: COLOURS.accent, transparent: true, opacity: 0.18 }),
+      ),
+    );
 
-    const pinGeometry = new SphereGeometry(0.0042, 16, 12);
-    for (const [code, station] of Object.entries(STATIONS)) {
+    const stations = Object.entries(STATIONS);
+    this.pins = new InstancedMesh(new SphereGeometry(0.0042, 12, 8), new MeshBasicMaterial(), stations.length);
+    this.table.add(this.pins);
+    this.packets = new InstancedMesh(
+      new SphereGeometry(0.0032, 8, 6),
+      additive('#ffffff', 0.95),
+      MAX_PACKET_LEGS * PACKETS_PER_LEG,
+    );
+    this.packets.frustumCulled = false;
+    for (let i = 0; i < this.packets.count; i++) this.packets.setMatrixAt(i, HIDDEN);
+    this.table.add(this.packets);
+    for (const [index, [code, station]] of stations.entries()) {
       const [x, z] = project(code);
-      const pin = new Mesh(pinGeometry, new MeshBasicMaterial({ color: '#7dd3fc' }));
-      pin.position.set(x, 0.004, z);
-      this.table.add(pin);
-      this.pins.set(code, pin);
+      this.pinIndex.set(code, index);
+      this.setPin(code, '#7dd3fc', 1);
       const label = new Sprite(
         new SpriteMaterial({ map: labelTexture(code, station.name), transparent: true, depthWrite: false }),
       );
@@ -220,12 +241,8 @@ export class MapSystem extends createSystem({}) {
     this.trip.clear();
     this.legs = [];
     this.beacons = [];
-    for (const pin of this.pins.values()) {
-      (pin.material as MeshBasicMaterial).color.set('#7dd3fc');
-      pin.scale.setScalar(1);
-    }
+    for (const code of this.pinIndex.keys()) this.setPin(code, '#7dd3fc', 1);
     const colour = SEVERITY[level] ?? COLOURS.warn;
-    const packetGeometry = new SphereGeometry(0.0032, 10, 8);
 
     flights.forEach((flight, i) => {
       // A leg and its return share a route: bow them apart so both show.
@@ -238,23 +255,13 @@ export class MapSystem extends createSystem({}) {
       const glow = new Mesh(new TubeGeometry(curve, TUBE_SEGMENTS, 0.0055, TUBE_SIDES, false), additive(tint, 0.28));
       core.geometry.setDrawRange(0, 0);
       glow.geometry.setDrawRange(0, 0);
-      const packets = Array.from({ length: PACKETS_PER_LEG }, () => {
-        const p = new Mesh(packetGeometry, additive('#ffffff', 0.95));
-        p.visible = false;
-        this.trip.add(p);
-        return p;
-      });
       this.trip.add(core, glow);
-      this.legs.push({ core, glow, curve, start: i * LEG_DELAY, flight, packets });
+      this.legs.push({ core, glow, curve, start: i * LEG_DELAY, flight });
     });
 
     const stations = [...new Set(flights.flatMap((f) => [f.from, f.to]))];
     stations.forEach((code, i) => {
-      const pin = this.pins.get(code);
-      if (pin) {
-        (pin.material as MeshBasicMaterial).color.set(colour);
-        pin.scale.setScalar(1.5);
-      }
+      this.setPin(code, colour, 1.5);
       this.beacons.push(this.beacon(code, colour, i * 0.23));
     });
     this.tripStarted = this.clock;
@@ -265,24 +272,20 @@ export class MapSystem extends createSystem({}) {
     const [x, z] = project(code);
     const group = new Group();
     group.position.set(x, 0, z);
-    const beam = [0, Math.PI / 2].map((turn) => {
-      const m = new Mesh(
-        new PlaneGeometry(0.01, 0.075),
-        new MeshBasicMaterial({
-          map: this.beam,
-          color: colour,
-          transparent: true,
-          opacity: 0.55,
-          blending: AdditiveBlending,
-          depthWrite: false,
-          side: DoubleSide,
-        }),
-      );
-      m.position.y = 0.0375;
-      m.rotation.y = turn;
-      group.add(m);
-      return m;
-    });
+    const beam = new Mesh(
+      crossedPlanes(0.01, 0.075),
+      new MeshBasicMaterial({
+        map: this.beam,
+        color: colour,
+        transparent: true,
+        opacity: 0.55,
+        blending: AdditiveBlending,
+        depthWrite: false,
+        side: DoubleSide,
+      }),
+    );
+    beam.position.y = 0.0375;
+    group.add(beam);
     const ripple = new Mesh(new RingGeometry(0.006, 0.0075, 48), additive(colour, 0.7));
     ripple.rotation.x = -Math.PI / 2;
     ripple.position.y = 0.0015;
@@ -327,10 +330,42 @@ export class MapSystem extends createSystem({}) {
     }
     for (const b of this.beacons) {
       const tint = this.covered ? COLOURS.ok : colour;
-      for (const m of b.beam) (m.material as MeshBasicMaterial).color.set(tint);
+      (b.beam.material as MeshBasicMaterial).color.set(tint);
       (b.ripple.material as MeshBasicMaterial).color.set(tint);
       (b.halo.material as SpriteMaterial).color.set(tint);
     }
+  }
+
+  private setPin(code: string, colour: string, scale: number): void {
+    const index = this.pinIndex.get(code);
+    if (index === undefined) return;
+    const [x, z] = project(code);
+    this.matrix.makeScale(scale, scale, scale).setPosition(x, 0.004, z);
+    this.pins.setMatrixAt(index, this.matrix);
+    this.pins.setColorAt(index, new Color(colour));
+    this.pins.instanceMatrix.needsUpdate = true;
+    if (this.pins.instanceColor) this.pins.instanceColor.needsUpdate = true;
+  }
+
+  /** Three packets ride each grown, uncrewed leg (every leg once the seat is covered). */
+  private movePackets(since: number): void {
+    const speed = this.covered ? 0.18 : 0.42;
+    for (let l = 0; l < MAX_PACKET_LEGS; l++) {
+      const leg = this.legs[l];
+      const live =
+        leg !== undefined && since > leg.start + LEG_GROW && (this.covered || leg.flight.state !== 'crewed');
+      for (let p = 0; p < PACKETS_PER_LEG; p++) {
+        const index = l * PACKETS_PER_LEG + p;
+        if (!live) {
+          this.packets.setMatrixAt(index, HIDDEN);
+          continue;
+        }
+        leg.curve.getPoint((this.clock * speed + p / PACKETS_PER_LEG) % 1, this.tmp);
+        this.matrix.makeTranslation(this.tmp.x, this.tmp.y, this.tmp.z);
+        this.packets.setMatrixAt(index, this.matrix);
+      }
+    }
+    this.packets.instanceMatrix.needsUpdate = true;
   }
 
   private shockwave(colour: string): void {
@@ -347,6 +382,23 @@ function legColour(flight: SeatFlight, uncrewed: string): string {
   if (flight.state === 'crewed') return COLOURS.crewed;
   if (flight.state === 'at_risk') return COLOURS.warn;
   return uncrewed;
+}
+
+/** Two planes crossed at right angles in one geometry: a light beam seen from any side. */
+function crossedPlanes(width: number, height: number): BufferGeometry {
+  const w = width / 2;
+  const h = height / 2;
+  // prettier-ignore
+  const positions = [
+    -w, -h, 0,  w, -h, 0,  w, h, 0,  -w, h, 0,
+    0, -h, -w,  0, -h, w,  0, h, w,  0, h, -w,
+  ];
+  const uvs = [0, 0, 1, 0, 1, 1, 0, 1, 0, 0, 1, 0, 1, 1, 0, 1];
+  const geometry = new BufferGeometry();
+  geometry.setAttribute('position', new Float32BufferAttribute(positions, 3));
+  geometry.setAttribute('uv', new Float32BufferAttribute(uvs, 2));
+  geometry.setIndex([0, 1, 2, 0, 2, 3, 4, 5, 6, 4, 6, 7]);
+  return geometry;
 }
 
 /** A raised arc between two stations; `side` bows it left or right of the straight line. */

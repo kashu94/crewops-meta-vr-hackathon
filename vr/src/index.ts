@@ -5,6 +5,7 @@ import { CardSystem } from './cards.js';
 import { Desk } from './desk.js';
 import { MapSystem } from './map.js';
 import { PanelSystem } from './panels.js';
+import { StatsEndSystem, StatsStartSystem, statsEnabled } from './stats.js';
 import { TimelineSystem } from './timeline.js';
 import { createWorkspaceRoot, WorkspaceSystem } from './workspace.js';
 
@@ -24,6 +25,10 @@ World.create(document.getElementById('scene-container') as HTMLDivElement, proje
       .registerSystem(CardSystem)
       .registerSystem(TimelineSystem)
       .registerSystem(PanelSystem);
+    if (statsEnabled()) {
+      world.registerSystem(StatsStartSystem, { priority: -100 }).registerSystem(StatsEndSystem, { priority: 1000 });
+      (window as unknown as { crewopsWorld: World }).crewopsWorld = world; // for profiling scripts
+    }
 
     void desk.start();
   },
