@@ -264,6 +264,23 @@ one of the network URLs `npm run dev:status` prints.
 | `src/workspace.ts` | Places the desk in front of the seated user; recenter |
 | `src/voice.ts`, `src/sound.ts` | Spoken replies, voice questions and sound cues |
 
+### Performance
+
+The Quest browser renders WebXR at 72 fps by default, about 13.7 ms a frame, and draw calls
+are the main CPU cost there. Open the workspace with `?stats` to log, once a second, the
+draw calls, triangles, textures and ECS update time (`[crewops-stats]` in the console).
+Measured in a headset session in the IWSDK emulator (both eyes):
+
+| | Draw calls | Triangles |
+|---|---|---|
+| First build | 328 | 109k |
+| Now: instanced pins and traffic packets, merged spokes and beams, lighter tubes | 218 | 88k |
+
+About 110 draw calls an eye, half of them the three panels. The app's own systems add no
+measurable time to the ECS update; it is IWSDK's input, grab and UI work. Desktop timings
+don't predict a Quest's, so the frame rate itself still has to be confirmed on a headset
+(Meta's OVR Metrics Tool overlay), over a full ten-minute session.
+
 The sample operation in `vr/public/sample/` is generated, never hand-written. After a
 change to the engine or the seed:
 
