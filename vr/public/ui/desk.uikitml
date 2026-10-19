@@ -1,0 +1,178 @@
+<!--
+  The desk: what is waiting on this controller, most severe first, and a three-step guide.
+  Rows are fixed slots that the panel system fills, highlights or hides. Every element the
+  system writes to starts with text: UIKit only builds a text node for an element that has
+  text when the document is parsed.
+-->
+<style>
+  .root {
+    flex-direction: column;
+    padding-top: 1.6;
+    padding-bottom: 1.6;
+    padding-left: 1.7;
+    padding-right: 1.7;
+    gap: 0.7;
+    background-color: #0a1222;
+    border-color: #1f3b63;
+    border-width: 0.12;
+    border-radius: 2.4;
+  }
+  .header { flex-direction: row; align-items: center; gap: 0.8; }
+  .badge {
+    width: 3.2;
+    height: 3.2;
+    border-radius: 1;
+    background-color: #0c2a4a;
+    align-items: center;
+    justify-content: center;
+  }
+  .badge-icon { width: 1.8; height: 1.8; color: #38bdf8; }
+  .heading { flex-direction: column; gap: 0.15; }
+  .eyebrow { font-size: 0.95; font-weight: 700; color: #38bdf8; }
+  .title { font-size: 1.9; font-weight: 700; color: #f1f5f9; }
+  .muted { font-size: 1.0; color: #8ea3bf; }
+  .divider { height: 0.08; background-color: #1f3b63; margin-top: 0.3; margin-bottom: 0.3; }
+  .label { font-size: 0.9; font-weight: 700; color: #64748b; }
+  .button {
+    flex-direction: row;
+    align-items: center;
+    gap: 0.6;
+    padding-top: 0.75;
+    padding-bottom: 0.75;
+    padding-left: 1.3;
+    padding-right: 1.3;
+    border-radius: 1.2;
+    background-color: #16294a;
+    cursor: pointer;
+  }
+  .button:hover { background-color: #1f3b63; }
+  .button-text { font-size: 1.15; font-weight: 600; color: #e2e8f0; }
+  .button-icon { width: 1.4; height: 1.4; color: #e2e8f0; }
+
+  .root { width: 31; }
+  .row {
+    flex-direction: row;
+    gap: 0.9;
+    padding-top: 0.9;
+    padding-bottom: 0.9;
+    padding-left: 0.9;
+    padding-right: 1.1;
+    background-color: #0f1b31;
+    border-color: #1a3052;
+    border-width: 0.1;
+    border-radius: 1.4;
+    cursor: pointer;
+  }
+  .row:hover { background-color: #132440; }
+  .bar { width: 0.4; border-radius: 0.2; background-color: #f59e0b; }
+  .row-body { flex-direction: column; gap: 0.35; flex-grow: 1; }
+  .row-head { flex-direction: row; align-items: center; gap: 0.7; }
+  .chip {
+    font-size: 0.85;
+    font-weight: 800;
+    color: #0a1222;
+    background-color: #f59e0b;
+    padding-top: 0.15;
+    padding-bottom: 0.15;
+    padding-left: 0.6;
+    padding-right: 0.6;
+    border-radius: 0.6;
+  }
+  .row-airline { font-size: 0.95; font-weight: 700; color: #8ea3bf; }
+  .row-title { font-size: 1.3; font-weight: 600; color: #f1f5f9; }
+  .row-meta { font-size: 1.0; color: #8ea3bf; }
+  .empty { font-size: 1.2; color: #8ea3bf; }
+  .steps { flex-direction: column; gap: 0.5; }
+  .step { flex-direction: row; align-items: center; gap: 0.7; }
+  .step-dot {
+    width: 1.9;
+    height: 1.9;
+    border-radius: 0.95;
+    font-size: 0.95;
+    font-weight: 800;
+    color: #8ea3bf;
+    background-color: #16294a;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .step-text { font-size: 1.05; color: #8ea3bf; }
+  .actions { flex-direction: row; gap: 0.7; }
+  .primary { background-color: #0284c7; }
+  .primary:hover { background-color: #0ea5e9; }
+</style>
+<div class="root">
+  <div class="header">
+    <div class="badge"><Plane class="badge-icon"></Plane></div>
+    <div class="heading">
+      <div id="desk-eyebrow" class="eyebrow">CREW CONTROL</div>
+      <div id="desk-title" class="title">Waiting on your desk</div>
+    </div>
+  </div>
+  <div id="desk-mode" class="muted">Loading</div>
+  <button id="row-0" class="row">
+    <div id="row-0-bar" class="bar"></div>
+    <div class="row-body">
+      <div class="row-head">
+        <div id="row-0-sev" class="chip">MEDIUM</div>
+        <div id="row-0-airline" class="row-airline">KS</div>
+      </div>
+      <div id="row-0-title" class="row-title">Crew member unavailable</div>
+      <div id="row-0-meta" class="row-meta">Details</div>
+    </div>
+  </button>
+  <button id="row-1" class="row">
+    <div id="row-1-bar" class="bar"></div>
+    <div class="row-body">
+      <div class="row-head">
+        <div id="row-1-sev" class="chip">MEDIUM</div>
+        <div id="row-1-airline" class="row-airline">KS</div>
+      </div>
+      <div id="row-1-title" class="row-title">Crew member unavailable</div>
+      <div id="row-1-meta" class="row-meta">Details</div>
+    </div>
+  </button>
+  <button id="row-2" class="row">
+    <div id="row-2-bar" class="bar"></div>
+    <div class="row-body">
+      <div class="row-head">
+        <div id="row-2-sev" class="chip">MEDIUM</div>
+        <div id="row-2-airline" class="row-airline">KS</div>
+      </div>
+      <div id="row-2-title" class="row-title">Crew member unavailable</div>
+      <div id="row-2-meta" class="row-meta">Details</div>
+    </div>
+  </button>
+  <button id="row-3" class="row">
+    <div id="row-3-bar" class="bar"></div>
+    <div class="row-body">
+      <div class="row-head">
+        <div id="row-3-sev" class="chip">MEDIUM</div>
+        <div id="row-3-airline" class="row-airline">KS</div>
+      </div>
+      <div id="row-3-title" class="row-title">Crew member unavailable</div>
+      <div id="row-3-meta" class="row-meta">Details</div>
+    </div>
+  </button>
+  <div id="desk-empty" class="empty">Nothing is waiting on your desk.</div>
+  <div class="divider"></div>
+  <div class="steps">
+    <div id="step-1" class="step">
+      <div id="step-1-dot" class="step-dot">1</div>
+      <div id="step-1-text" class="step-text">Choose a disruption</div>
+    </div>
+    <div id="step-2" class="step">
+      <div id="step-2-dot" class="step-dot">2</div>
+      <div id="step-2-text" class="step-text">Drop a crew card on the table</div>
+    </div>
+    <div id="step-3" class="step">
+      <div id="step-3-dot" class="step-dot">3</div>
+      <div id="step-3-text" class="step-text">Submit for a second approval</div>
+    </div>
+  </div>
+  <div class="actions">
+    <button id="xr-button" class="button primary"><Glasses class="button-icon"></Glasses><div class="button-text">Enter the headset view</div></button>
+    <button id="recenter-button" class="button"><LocateFixed class="button-icon"></LocateFixed><div class="button-text">Recenter</div></button>
+    <button id="exit-button" class="button"><div class="button-text">Exit</div></button>
+  </div>
+</div>
