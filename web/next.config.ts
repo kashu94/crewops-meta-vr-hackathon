@@ -6,6 +6,8 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Don't let `next dev` write its AGENTS.md instructions file into the repo.
   agentRules: false,
+  // The dev-only Next.js badge sat on top of the sidebar's account row.
+  devIndicators: false,
   // The headset workspace (vr/) builds into public/vr; /vr serves its page.
   async rewrites() {
     return [{ source: "/vr", destination: "/vr/index.html" }];

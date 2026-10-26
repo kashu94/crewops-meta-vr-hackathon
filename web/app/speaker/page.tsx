@@ -379,6 +379,10 @@ export default function Speaker() {
   async function ask(text: string) {
     const q = text.trim();
     if (!q) return;
+    // One voice at a time: wait for an announcement already playing, then hold the speaker
+    // so a reminder that falls due meanwhile doesn't talk over the answer.
+    while (busy.current) await new Promise((r) => setTimeout(r, 250));
+    busy.current = true;
     setSpeaking(true);
     try {
       const r = await fetch("/api/speaker/ask", {
@@ -395,6 +399,7 @@ export default function Speaker() {
       setReply({ question: q, ...answer });
       await say(answer.text);
     } finally {
+      busy.current = false;
       setSpeaking(false);
     }
   }
