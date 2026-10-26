@@ -41,6 +41,7 @@ headset the same desk runs in the browser, worked with the mouse.
 | Seat and submit | Let go over the table: legal cover flies into the seat, a shockwave crosses the table and the trip turns green. Submit sends the plan for approval |
 | Four eyes | An approver sees the plan waiting, the proposed cover already in the seat and checked again, and approves (commits the roster) or sends it back |
 | CrewOps Agent | Suggested questions for the disruption, or voice where the browser can hear; the verified answer is shown and spoken |
+| Drills | A timed training run on a copy of the operation, never the live roster: three sick calls to cover. Each seat scores 300, less 3 for each % over the engine's cheapest legal cover, 40 for each crew member offered who was not legal, and 1 for each second past 45. A debrief gives the score, a grade and the best on this device, so there is always a number to beat |
 | First five minutes | The desk rises into place, an alert chime and a short spoken brief say what happened, and a three-step guide on the desk ticks off as you go |
 | Sound | Synthesised cues for pick-up, a legal or failing verdict, cover placed and a plan sent |
 
@@ -72,13 +73,13 @@ live in code, never in a prompt.
 
 | Role | Can do |
 |---|---|
-| Crew | See own schedule, report own unavailability |
+| Crew | See own schedule (reserves, their standby days), ask about their own trips, limits and absences, report own unavailability |
 | Reporter | Record any disruption: sick crew (one or several), certification expiry, delays, aircraft faults, station and gate closures, gate changes |
 | Controller | Review disruptions and options, submit one plan for approval |
-| Approver | Approve or reject submitted plans; approval commits them |
+| Approver | Approve or reject submitted plans (approval commits them), and sign off a disruption a controller resolved without re-crewing |
 | Auditor | Read-only access to every disruption, decision and audit record |
-| Admin | Tighten rule thresholds, read the system activity log, manage alert addresses |
-| Super admin | Everything an admin does, and relax a rule threshold back towards regulation |
+| Admin | Revoke a report filed in error until its cover is approved; reset the passwords of crew, reporters, controllers, approvers and auditors; book planned leave; tighten rule thresholds; read the system activity log; manage alert addresses. Never submits or approves a plan |
+| Super admin | Everything an admin does, and also reset admins' passwords and relax a rule threshold back towards regulation |
 | Speaker | A device, not a person: hears the alert briefs for its desk or the room |
 
 ## Architecture
@@ -255,7 +256,8 @@ one of the network URLs `npm run dev:status` prints.
 
 | File | What it does |
 |---|---|
-| `src/desk.ts` | The controller's (or approver's) desk: the queue, the disruption, the seat, the verdict, submit and approve. Only this talks to the backend |
+| `src/desk.ts` | The controller's (or approver's) desk: the queue, the disruption, the seat, the verdict, submit and approve, and drills. Only this talks to the backend |
+| `src/drill.ts` | Drill scoring and the best score kept on the device |
 | `src/backend.ts` | Live tool calls through the web app, or the sample files |
 | `src/map.ts` | The holotable: landmass, stations, the trip's legs, beacons, the aircraft, shockwaves |
 | `src/cards.ts` | Crew cards, the tray, the seat hologram, and the drop-on-the-table check |
