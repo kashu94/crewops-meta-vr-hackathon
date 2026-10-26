@@ -21,4 +21,9 @@ export default defineAssets({
     type: AssetType.UIKitML,
     name: 'Agent panel',
   },
+  'drill-panel': {
+    url: publicAssetUrl('ui/drill.uikitml'),
+    type: AssetType.UIKitML,
+    name: 'Drill panel',
+  },
 });

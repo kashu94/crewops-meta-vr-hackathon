@@ -8,6 +8,7 @@ import {
   type UIKitMLAsset,
 } from '@iwsdk/core';
 import type { Desk } from './desk.js';
+import { bestScore, clock, pointsFor, scoreOf } from './drill.js';
 import { COLOURS, inr, SEVERITY, STRATEGY } from './palette.js';
 import { cue } from './sound.js';
 import type { Detail, FeedItem, Verdict } from './types.js';
@@ -38,6 +39,8 @@ type Find = (id: string) => Element;
 
 export class PanelSystem extends createSystem({}) {
   private briefed = false;
+  private clockText: Element | null = null;
+  private lastClock = '';
 
   init(): void {
     void this.build();
@@ -46,15 +49,17 @@ export class PanelSystem extends createSystem({}) {
   private async build(): Promise<void> {
     const root = (this.globals as Record<string, unknown>).workspace as Entity;
     const desk = this.desk();
-    const [left, right, back] = await Promise.all([
+    const [left, right, back, drill] = await Promise.all([
       this.world.assets.instantiate<UIKitMLAsset>('desk-panel'),
       this.world.assets.instantiate<UIKitMLAsset>('seat-panel'),
       this.world.assets.instantiate<UIKitMLAsset>('agent-panel'),
+      this.world.assets.instantiate<UIKitMLAsset>('drill-panel'),
     ]);
     for (const [panel, place] of [
       [left, PLACES.desk],
       [right, PLACES.seat],
       [back, PLACES.agent],
+      [drill, PLACES.agent],
     ] as const) {
       panel.position.set(place.x, place.y, place.z);
       panel.rotation.set(0, place.yaw, 0);
@@ -66,6 +71,83 @@ export class PanelSystem extends createSystem({}) {
     this.wireDesk(finder(left), desk);
     this.wireSeat(finder(right), desk);
     this.wireAgent(finder(back), desk);
+    this.wireDrill(finder(drill), desk, back, drill);
+    this.on(finder(left)('drill-button'), () => {
+      if (desk.drilling) void desk.endDrill();
+      else void this.startDrill(desk);
+    });
+    this.cleanupFuncs.push(
+      effect(() => {
+        const drilling = desk.drill.value !== null && desk.drill.value.finishedMs === null;
+        finder(left)('drill-button-text').setProperties({ text: drilling ? 'End the drill' : 'Start a drill' });
+      }),
+    );
+  }
+
+  update(): void {
+    const drill = this.desk().drill.peek();
+    if (!drill || !this.clockText) return;
+    const text = clock((drill.finishedMs ?? performance.now()) - drill.startedMs);
+    if (text !== this.lastClock) {
+      this.lastClock = text;
+      this.clockText.setProperties({ text });
+    }
+  }
+
+  private async startDrill(desk: Desk): Promise<void> {
+    cue.alert();
+    await desk.startDrill();
+    const total = desk.drill.peek()?.total ?? 0;
+    void say(
+      desk.backend,
+      `Drill. ${total} crew members have called in sick. Cover every seat legally, as cheaply and as quickly as you can.`,
+    );
+  }
+
+  private wireDrill(el: Find, desk: Desk, agent: UIKitMLAsset, panel: UIKitMLAsset): void {
+    this.clockText = el('drill-clock');
+    this.on(el('drill-again'), () => void this.startDrill(desk));
+    this.on(el('drill-exit'), () => void desk.endDrill());
+    let announced: number | null = null;
+    this.cleanupFuncs.push(
+      effect(() => {
+        const drill = desk.drill.value;
+        panel.visible = drill !== null;
+        agent.visible = drill === null;
+        if (!drill) return;
+        const finished = drill.finishedMs !== null;
+        el('drill-title').setProperties({ text: finished ? 'Drill complete' : 'Cover every seat' });
+        el('drill-progress').setProperties({ text: `${drill.results.length} of ${drill.total} covered` });
+        for (let i = 0; i < 4; i++) {
+          const r = drill.results[i];
+          if (!r) {
+            el(`r-${i}`).setProperties({ display: 'none' });
+            continue;
+          }
+          const pts = pointsFor(r);
+          const over = r.best_inr ? Math.round((r.cost_inr / r.best_inr - 1) * 100) : 0;
+          el(`r-${i}`).setProperties({ display: 'flex' });
+          el(`r-${i}-text`).setProperties({
+            text: `${r.pairing_id}  ${inr(r.cost_inr)} (${over > 0 ? `${over}% over best` : 'cheapest legal'})  |  ${Math.round(r.seconds)} s  |  ${r.misses} miss${r.misses === 1 ? '' : 'es'}`,
+          });
+          el(`r-${i}-points`).setProperties({ text: String(pts.total) });
+        }
+        const { score, grade } = scoreOf(drill.results);
+        const tone = grade === 'A' ? COLOURS.ok : grade === 'B' ? '#38bdf8' : grade === 'C' ? COLOURS.warn : COLOURS.bad;
+        el('drill-score-row').setProperties({ display: finished ? 'flex' : 'none' });
+        el('drill-score').setProperties({ text: `${score} / 100`, color: tone });
+        el('drill-grade').setProperties({ text: grade, backgroundColor: tone });
+        const best = bestScore();
+        el('drill-best').setProperties({ text: `Best on this device: ${best ?? '-'}` });
+        el('drill-again').setProperties({ display: finished ? 'flex' : 'none' });
+        el('drill-exit-text').setProperties({ text: finished ? 'Back to the desk' : 'End the drill' });
+        if (finished && announced !== drill.startedMs) {
+          announced = drill.startedMs;
+          cue.sent();
+          void say(desk.backend, `Drill complete. ${score} out of 100, grade ${grade}.${drill.newBest ? ' A new best.' : ''}`);
+        }
+      }),
+    );
   }
 
   private wireDesk(el: Find, desk: Desk): void {

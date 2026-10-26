@@ -99,6 +99,8 @@
   .step-text { font-size: 1.05; color: #8ea3bf; }
   .actions { flex-direction: row; gap: 0.7; }
   .primary { background-color: #0284c7; }
+  .drill { background-color: #5b21b6; }
+  .drill:hover { background-color: #7c3aed; }
   .primary:hover { background-color: #0ea5e9; }
 </style>
 <div class="root">
@@ -173,6 +175,9 @@
   <div class="actions">
     <button id="xr-button" class="button primary"><Glasses class="button-icon"></Glasses><div class="button-text">Enter the headset view</div></button>
     <button id="recenter-button" class="button"><LocateFixed class="button-icon"></LocateFixed><div class="button-text">Recenter</div></button>
+  </div>
+  <div class="actions">
+    <button id="drill-button" class="button drill"><Gauge class="button-icon"></Gauge><div id="drill-button-text" class="button-text">Start a drill</div></button>
     <button id="exit-button" class="button"><div class="button-text">Exit</div></button>
   </div>
 </div>

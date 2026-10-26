@@ -27,7 +27,8 @@ World.create(document.getElementById('scene-container') as HTMLDivElement, proje
       .registerSystem(PanelSystem);
     if (statsEnabled()) {
       world.registerSystem(StatsStartSystem, { priority: -100 }).registerSystem(StatsEndSystem, { priority: 1000 });
-      (window as unknown as { crewopsWorld: World }).crewopsWorld = world; // for profiling scripts
+      // for profiling and test scripts
+      Object.assign(window as unknown as Record<string, unknown>, { crewopsWorld: world, crewopsDesk: desk });
     }
 
     void desk.start();

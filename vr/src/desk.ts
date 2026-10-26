@@ -1,5 +1,6 @@
 import { signal } from '@iwsdk/core';
 import { Backend, SignInNeeded, signInUrl } from './backend.js';
+import { type DrillResult, type DrillState, saveBest, scoreOf } from './drill.js';
 import type { Answer, Detail, FeedItem, Legality, Me, Plan, Seat } from './types.js';
 
 // The controller's desk: what is waiting, the disruption being worked, the seat being
@@ -47,10 +48,21 @@ export class Desk {
   /** Verdicts already given this session, by crew id, so a checked card keeps its stamp. */
   readonly verdicts = signal<Record<string, Legality>>({});
   readonly busy = signal(false);
+  /** A drill under way or just finished; null at the normal desk. */
+  readonly drill = signal<DrillState | null>(null);
 
   private conversation = 0;
+  /** Where the desk's data comes from: the live (or sample) desk, or a drill's training copy. */
+  backend: Backend;
 
-  constructor(readonly backend: Backend) {}
+  constructor(private readonly home: Backend) {
+    this.backend = home;
+  }
+
+  get drilling(): boolean {
+    const d = this.drill.peek();
+    return d !== null && d.finishedMs === null;
+  }
 
   get seat(): Seat | null {
     return this.detail.peek()?.seats[0] ?? null;
@@ -58,6 +70,7 @@ export class Desk {
 
   /** An approver (and not also a controller) works the four-eyes queue instead. */
   get approving(): boolean {
+    if (this.drill.peek()) return false; // a drill is always crew control's side
     const roles = this.me.peek()?.roles ?? [];
     return roles.includes('approver') && !roles.includes('controller');
   }
@@ -81,7 +94,7 @@ export class Desk {
 
   /** Disruptions on this controller's desk that still need cover, most severe first. */
   async refresh(): Promise<void> {
-    const desk = this.me.peek()?.desk;
+    const desk = this.drill.peek() ? null : this.me.peek()?.desk;
     const all = await this.backend.feed();
     this.feed.value = this.approving
       ? all.filter((d) => d.status === 'SUBMITTED').sort((a, b) => level(a) - level(b))
@@ -203,6 +216,7 @@ export class Desk {
       this.check.value = result
         ? { state: 'done', crew_id: candidate.crew_id, result }
         : { state: 'failed', crew_id: candidate.crew_id, message: 'No verdict for this card.' };
+      if (result && !result.legal) this.miss(candidate.crew_id);
       if (result) this.verdicts.value = { ...this.verdicts.peek(), [candidate.crew_id]: result };
     } catch (err) {
       this.check.value = {
@@ -237,6 +251,10 @@ export class Desk {
     const detail = this.detail.peek();
     const seat = this.seat;
     if (!detail || !seat || this.busy.peek()) return;
+    if (this.drilling) {
+      await this.drillSubmit(detail.disruption_id, seat);
+      return;
+    }
     const chosen = this.chosen.peek();
     const choices: Record<string, string> = chosen
       ? { [`${seat.pairing_id}/${seat.role}`]: chosen.crew_id }
@@ -294,6 +312,72 @@ export class Desk {
     const best = seat.options.find((o) => o.crew_id)?.crew_id;
     if (best) out.push(`How many duty hours does ${best} have?`);
     return out;
+  }
+
+  // -- Drills ---------------------------------------------------------------------------
+
+  /** Start a timed drill on the sample operation's disruptions. Never touches the roster. */
+  async startDrill(): Promise<void> {
+    this.backend = new Backend('sample');
+    this.drill.value = { total: 0, startedMs: performance.now(), current: null, results: [], finishedMs: null };
+    this.sent.value = 0;
+    await this.refresh();
+    const drill = this.drill.peek();
+    if (!drill) return;
+    this.drill.value = { ...drill, total: this.feed.peek().length, startedMs: performance.now() };
+    await this.nextInDrill();
+  }
+
+  async endDrill(): Promise<void> {
+    this.backend = this.home;
+    this.drill.value = null;
+    this.sent.value = 0;
+    this.selected.value = null;
+    this.detail.value = null;
+    await this.start();
+  }
+
+  private async nextInDrill(): Promise<void> {
+    const drill = this.drill.peek();
+    if (!drill) return;
+    const done = new Set(drill.results.map((r) => r.disruption_id));
+    const next = this.feed.peek().find((d) => !done.has(d.disruption_id));
+    if (!next) {
+      const { score } = scoreOf(drill.results);
+      this.drill.value = { ...drill, current: null, finishedMs: performance.now(), newBest: saveBest(score) };
+      this.status.value = `Drill complete: ${score} out of 100.`;
+      return;
+    }
+    this.drill.value = { ...drill, current: { disruption_id: next.disruption_id, startedMs: performance.now(), missed: [] } };
+    await this.select(next.disruption_id);
+  }
+
+  private miss(crewId: string): void {
+    const drill = this.drill.peek();
+    if (!drill?.current || drill.finishedMs !== null || drill.current.missed.includes(crewId)) return;
+    this.drill.value = { ...drill, current: { ...drill.current, missed: [...drill.current.missed, crewId] } };
+  }
+
+  private async drillSubmit(disruptionId: string, seat: Seat): Promise<void> {
+    const drill = this.drill.peek();
+    if (!drill?.current) return;
+    const best = seat.options.find((o) => o.crew_id)?.cost_inr ?? 0;
+    const chosen = this.chosen.peek();
+    const result: DrillResult = {
+      disruption_id: disruptionId,
+      pairing_id: seat.pairing_id,
+      cost_inr: chosen?.cost_inr ?? best,
+      best_inr: best,
+      seconds: (performance.now() - drill.current.startedMs) / 1000,
+      misses: drill.current.missed.length,
+    };
+    this.drill.value = { ...drill, results: [...drill.results, result] };
+    this.sent.value++;
+    this.status.value = `${seat.pairing_id} covered. Next one...`;
+    this.busy.value = true;
+    await new Promise((resolve) => setTimeout(resolve, 1400));
+    this.busy.value = false;
+    await this.nextInDrill();
   }
 
   private fail(err: unknown): void {
